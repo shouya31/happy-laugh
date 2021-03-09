@@ -19,26 +19,32 @@
     <title>HappyLaugh MAGAZINE</title>
 	</head>
   <body>
-    <!-- ここからheader -->
-    <header class="lg:border-b-8 lg:border-gray-200">
-      <!-- ここからロゴ -->
-      <div class="pt-4 pb-4 lg:mb-8">
-        <div class="text-lg lg:text-4xl font-semibold flex justify-center">ハピラフ</div>
-        <div class="text-3xl lg:text-6xl font-black flex justify-center">MAGAZINE</div>
+    <!-- ヘッダー -->
+    <header class="shadow-xl">
+      <!-- ロゴ -->
+      <div class="flex flex-col items-center pt-4 pb-4 lg:mb-8">
+        <div class="text-lg lg:text-4xl font-semibold">ハピラフ</div>
+        <div class="text-3xl lg:text-6xl font-black">MAGAZINE</div>
       </div>
-      <!-- ロゴここまで -->
+      <!-- /ロゴ -->
 
-      <!-- ここからMobileMenu
-      MobileMenuここまで -->
-
-      <!-- ここからPCMenu -->
-      <div class="hidden lg:flex lg:justify-center lg:mb-4">
-        <div class="w-1080 flex justify-around">
+      <!-- メニュー -->
+      <div class="hidden lg:flex justify-center border-b-2 border-gray-300 pt-4 pb-4">
+        <div class="w-3/6 flex justify-around">
           <div>Home</div>
           <div>Ranking</div>
           <div>Categories</div>
           <div>Writer</div>
         </div>
       </div>
-      <!-- PCMenuここまで -->
+      <div class="hidden lg:flex justify-center pt-4 pb-4">
+        <div class="w-5/6 flex justify-around">
+          <div>category1</div>
+          <div>category2</div>
+          <div>category3</div>
+          <div>category4</div>
+        </div>
+      </div>
+      <!-- /メニュー -->
     </header>
+    <!-- /ヘッダー -->
