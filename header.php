@@ -15,7 +15,7 @@
 		<meta name="referrer" content="no-referrer-when-downgrade"/>
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/tailwind.css">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
     <title>HappyLaugh MAGAZINE</title>
 	</head>
   <body>
