@@ -16,8 +16,10 @@
       <!-- ここからMenu -->
       <div class="hidden lg:block pt-12 pl-8">
         <div class="text-lg font-medium">Menu</div>
-        <div class="text-md text-gray-400 mt-2">NEWS</div>
-        <div class="text-md text-gray-400 mt-2">RANKING</div>
+        <div class="text-md text-gray-400 mt-2">Hoem</div>
+        <div class="text-md text-gray-400 mt-2">Ranking</div>
+        <div class="text-md text-gray-400 mt-2">Categories</div>
+        <div class="text-md text-gray-400 mt-2">Writer</div>
       </div>
       <!-- Menuここまで -->
 
@@ -28,8 +30,6 @@
         <div class="text-md text-gray-400 mt-2">category2</div>
         <div class="text-md text-gray-400 mt-2">category3</div>
         <div class="text-md text-gray-400 mt-2">category4</div>
-        <div class="text-md text-gray-400 mt-2">category5</div>
-        <div class="text-md text-gray-400 mt-2">category6</div>
       </div>
       <!-- Categoryここまで -->
     </footer>
