@@ -38,12 +38,12 @@ $has_thumbnail     = st_has_term_thumbnail();
 					$allcats = array_reverse( $allcats );
 					?>
 
-					<?php 
+					<?php
 					$i = 2;
 					foreach ( $allcats as $catid ): ?>
 							<li itemprop="itemListElement" itemscope
       itemtype="http://schema.org/ListItem"><a href="<?php echo esc_url( get_category_link( $catid ) ); ?>" itemprop="item">
-								<span itemprop="name"><?php echo esc_html( get_cat_name( $catid ) ); ?></span> </a> &gt; 
+								<span itemprop="name"><?php echo esc_html( get_cat_name( $catid ) ); ?></span> </a> &gt;
 								<meta itemprop="position" content="<?php echo $i; ?>" />
 							</li>
 					<?php  $i++; ?>
@@ -58,7 +58,7 @@ $has_thumbnail     = st_has_term_thumbnail();
 		);
 		$tag_all = get_terms("category", $args);
 		$cat_data = get_option('cat_'.$now_category);
-   
+
 		if(trim($cat_data['listdelete']) === ''){
                      //一覧を表示する場合　?>
                         <div class="post">
@@ -90,7 +90,7 @@ $has_thumbnail     = st_has_term_thumbnail();
 
 			<?php if( category_description() && (!is_paged()) ){ //コンテンツがある場合 ?>
 				<?php if ( isset($GLOBALS['stplus']) && $GLOBALS['stplus'] === 'yes' ) {
-					get_template_part( 'st-rank' ); //ランキング 
+					get_template_part( 'st-rank' ); //ランキング
 				} ?>
 				<?php if( trim($cat_data['snscat'] ) !== '' ):
 					get_template_part( 'sns-cat' ); //ソーシャルボタン読み込み
@@ -104,7 +104,7 @@ $has_thumbnail     = st_has_term_thumbnail();
 			<?php if( category_description() && (!is_paged()) ){ //コンテンツがある場合 ?>
 				</div>
 			<?php }else{
-				get_template_part( 'st-rank' ); //ランキング 
+				get_template_part( 'st-rank' ); //ランキング
 			} ?>
 
 		<?php }else{ //一覧を表示しない ?>
@@ -120,7 +120,7 @@ $has_thumbnail     = st_has_term_thumbnail();
 				<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 21 ) ) : else : //カテゴリページ上一括ウィジェット ?>
 				<?php endif; ?>
 			<?php } ?>
-                      
+
 			<div id="nocopy" <?php st_text_copyck(); ?>>
 				<?php if ( $is_thumbnal_under && $has_thumbnail ): // サムネイル ?>
 					<?php get_template_part( 'st-category-eyecatch' ); ?>
@@ -134,7 +134,7 @@ $has_thumbnail     = st_has_term_thumbnail();
 
 			<?php if(trim($cat_data['snscat']) !== '' && (category_description())){ //コンテンツがある場合 ?>
 				<?php if ( isset($GLOBALS['stplus']) && $GLOBALS['stplus'] === 'yes' ) {
-					get_template_part( 'st-rank' ); //ランキング 
+					get_template_part( 'st-rank' ); //ランキング
 				} ?>
 				<?php get_template_part( 'sns-cat' ); //ソーシャルボタン読み込み ?>
 			<?php } ?>
@@ -144,7 +144,7 @@ $has_thumbnail     = st_has_term_thumbnail();
 
 		<?php if((trim($cat_data['snscat']) !== '') && (!category_description())){ //コンテンツがない場合 ?>
 			<?php if ( isset($GLOBALS['stplus']) && $GLOBALS['stplus'] === 'yes' ) {
-				get_template_part( 'st-rank' ); //ランキング 
+				get_template_part( 'st-rank' ); //ランキング
 			} ?>
 			<?php get_template_part( 'sns-cat' ); //ソーシャルボタン読み込み ?>
 		<?php } ?>

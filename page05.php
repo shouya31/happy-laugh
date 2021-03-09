@@ -208,4 +208,4 @@ $st_is_ex_af = st_is_ver_ex_af();
 	<?php get_sidebar(); ?>
 </div>
 <!--/#content -->
-<?php get_footer(); ?>
+

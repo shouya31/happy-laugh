@@ -196,13 +196,6 @@ $st_is_ex_af = st_is_ver_ex_af();
 					<?php if ( $st_is_ex_af ): get_template_part( 'st-author' ); endif;    // 記事を書いた人 ?>
 					<?php get_template_part( 'popular-thumbnail' );    // 任意のエントリ ?>
 
-					<?php if ( trim( $GLOBALS['stdata277'] ) === '' ):    // タグ・カテゴリリンク ?>
-						<p class="tagst">
-							<i class="fa fa-folder-open-o" aria-hidden="true"></i>-<?php the_category( ', ' ) ?><br/>
-							<?php the_tags( '<i class="fa fa-tags"></i>-', ', ' ); ?>
-						</p>
-					<?php endif; ?>
-
 					<aside>
 						<?php st_author();    // 著者リンク ?>
 
@@ -212,35 +205,9 @@ $st_is_ex_af = st_is_ver_ex_af();
 						<?php endif; ?>
 						<!--ループ終了-->
 
-						<?php if ( $GLOBALS['stdata6'] === '' ):    // コメント ?>
-							<?php if ( comments_open() || get_comments_number() ): ?>
-								<?php comments_template(); ?>
-							<?php endif; ?>
-						<?php endif; ?>
 
 						<!--関連記事-->
 						<?php get_template_part( 'kanren' ); ?>
-
-						<!--ページナビ-->
-						<div class="p-navi clearfix">
-							<dl>
-								<?php $prev_post = get_previous_post(); ?>
-								<?php if ( ! empty( $prev_post ) ): ?>
-									<dt>PREV</dt>
-									<dd>
-										<a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"><?php echo $prev_post->post_title; ?></a>
-									</dd>
-								<?php endif; ?>
-
-								<?php $next_post = get_next_post(); ?>
-								<?php if ( ! empty( $next_post ) ): ?>
-									<dt>NEXT</dt>
-									<dd>
-										<a href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>"><?php echo $next_post->post_title; ?></a>
-									</dd>
-								<?php endif; ?>
-							</dl>
-						</div>
 					</aside>
 
 				</div>
