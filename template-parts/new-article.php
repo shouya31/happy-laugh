@@ -14,7 +14,7 @@
     }
   ?>
   <a href="<?php the_permalink(); ?>" class="h-96 lg:h-64 w-11/12 flex flex-col lg:flex-row mb-8">
-    <div class="h-5/6 w-5/6 lg:h-full lg:w-4/12 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
+    <div class="lg:w-4/12 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
       <div class="w-2/5 bg-white flex justify-center">
         <div class="text-red-300 pt-2 pb-2">
           <?php if (!is_category() && has_category()): ?>
@@ -39,10 +39,10 @@
         </div>
       </div>
       <div class="h-5/6 w-full">
-        <div class="h-2/5 w-full text-3xl pt-2 pb-2">
+        <div class="font-verdana h-2/5 w-full text-2xl pt-2 pb-2"s>
           <?php the_title(); ?>
         </div>
-        <div class="h-3/5 w-full break-words pt-2 pb-2">
+        <div class="font-verdana h-3/5 w-full break-words pt-2 pb-2"s>
           <?php the_excerpt(); ?>
         </div>
       </div>

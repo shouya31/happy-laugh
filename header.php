@@ -34,7 +34,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,viewport-fit=cover">
 		<meta name="format-detection" content="telephone=no" >
 		<meta name="referrer" content="no-referrer-when-downgrade"/>
-
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 

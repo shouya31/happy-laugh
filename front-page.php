@@ -8,7 +8,10 @@ Template Name: TOPページ
 
     <!-- ここからPICKUP -->
     <div class="hidden lg:block h-560 w-full lg:flex justify-center items-center lg:mt-16 mb-48">
-      <div class="h-560 w-3/5 bg-cover bg-no-repeat bg-center bg-flower">
+    <?php
+      echo do_shortcode('[smartslider3 slider="2"]');
+      ?>
+      <!-- <div class="h-560 w-3/5 bg-cover bg-no-repeat bg-center">
         <div class="w-1/6 flex justify-center bg-white">
           <div class="text-red-300 pt-2 pb-2">
             CAFE
@@ -27,7 +30,7 @@ Template Name: TOPページ
               </div>
             </div>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- PICKUPここまで -->
 
@@ -58,7 +61,7 @@ Template Name: TOPページ
       <!-- ここからNEWS -->
       <div class="grid-span-1 lg:col-start-2 lg:col-end-8 flex flex-col pl-16">
         <div class="h-14 w-full lg:h-24 lg:w-9/12 flex justify-center items-center lg:justify-start lg:items-start border-b-2 border-gray-900 lg:border-b-8 lg:border-gray-900 mb-12">
-          <div class="text-2xl lg:text-6xl lg:font-bold">
+          <div class="text-2xl lg:text-6xl lg:font-bold font-verdana">
             NEW
           </div>
         </div>
@@ -71,7 +74,7 @@ Template Name: TOPページ
         <!-- ここからREADMORE -->
         <div class="hidden lg:block w-full lg:w-11/12 lg:flex justify-center items-center mt-8">
           <div class="h-20 w-96 flex justify-center items-center border-4 border-gray-900">
-            <div class="text-3xl text-center">
+            <div class="text-3xl text-center font-verdana">
               READ MORE
             </div>
           </div>
@@ -91,12 +94,12 @@ Template Name: TOPページ
       <!-- ここからスイッチ -->
       <div class="w-full flex border-t border-gray-300">
         <div class="w-1/2 border-b border-gray-900 flex justify-center items-center">
-          <div class="text-2xl font-light pt-2 pb-2">
+          <div class="text-2xl font-light pt-2 pb-2 font-verdana">
             NEW
           </div>
         </div>
         <div class="w-1/2 border-l border-b border-gray-300 flex justify-center items-center">
-          <div class="text-2xl font-light pt-2 pb-2">
+          <div class="text-2xl font-light pt-2 pb-2 font-verdana">
             RANKING
           </div>
         </div>
@@ -239,7 +242,7 @@ Template Name: TOPページ
     <!-- mobileメインコンテンツここまで -->
 
     <!-- ここから帯 -->
-    <div class="h-480 w-screen bg-bottom bg-cover bg-beach flex justify-center items-center">
+    <div class="h-480 w-screen bg-bottom bg-cover flex justify-center items-center">
       <div class="h-240 w-3/4 lg:w-1/2 bg-white bg-opacity-25 flex flex-col justify-around justify-center items-center p-4">
         <div class="h-24 w-11/12 lg:w-5/6 text-2xl text-center break-words">
           texttexttexttext<br>
