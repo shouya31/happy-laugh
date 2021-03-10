@@ -8,26 +8,24 @@ Template Name: TOPページ
 
     <!-- ここからPICKUP -->
     <div class="hidden lg:block h-560 w-full lg:flex justify-center items-center lg:mt-16 mb-48">
-      <div class="h-560 w-960 bg-cover bg-no-repeat bg-center bg-flower">
+      <div class="h-560 w-3/5 bg-cover bg-no-repeat bg-center bg-flower">
         <div class="w-1/6 flex justify-center bg-white">
           <div class="text-red-300 pt-2 pb-2">
             CAFE
           </div>
         </div>
-        <div class="h-560 w-full flex justify-center items-center">
-          <div class="">
-            <div class="text-white text-4xl text-center mb-16">
+        <div class="h-560 w-full flex flex-col justify-center items-center">
+            <div class="w-4/5 text-white text-4xl text-center mb-4">
               タイトルタイトルタイトルタイトルタイトル<br>
               タイトルタイトルタイトル
             </div>
-            <div class="flex">
-              <div class="text-white mr-48">2021.03.01</div>
+            <div class="w-full flex justify-center relative">
+              <div class="absolute right-2/3 text-white">2021.03.01</div>
               <div class="flex">
                 <div class="h-8 w-8 bg-contain bg-no-repeat bg-baby"></div>
                 <div class="text-white ml-4">User</div>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
@@ -71,7 +69,7 @@ Template Name: TOPページ
         <!-- 投稿ここまで -->
 
         <!-- ここからREADMORE -->
-        <div class="hidden lg:block w-full lg:w-840 lg:flex justify-center items-center mt-8">
+        <div class="hidden lg:block w-full lg:w-11/12 lg:flex justify-center items-center mt-8">
           <div class="h-20 w-96 flex justify-center items-center border-4 border-gray-900">
             <div class="text-3xl text-center">
               READ MORE
@@ -242,13 +240,13 @@ Template Name: TOPページ
 
     <!-- ここから帯 -->
     <div class="h-480 w-screen bg-bottom bg-cover bg-beach flex justify-center items-center">
-      <div class="h-240 w-3/4 lg:w-2/5 bg-white bg-opacity-25 flex flex-col justify-around justify-center items-center p-4">
-        <div class="h-24 w-48 lg:w-3/4 text-2xl text-center break-words ">
+      <div class="h-240 w-3/4 lg:w-1/2 bg-white bg-opacity-25 flex flex-col justify-around justify-center items-center p-4">
+        <div class="h-24 w-11/12 lg:w-5/6 text-2xl text-center break-words">
           texttexttexttext<br>
           texttexttexttext<br>
           texttexttexttext
         </div>
-        <div class="h-10 w-48 lg:w-64 flex justify-center items-center bg-gray-900">
+        <div class="h-10 w-3/4 lg:w-2/5 flex justify-center items-center bg-gray-900">
           <div class="text-white text-center">
             ライター一覧
           </div>
