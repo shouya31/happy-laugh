@@ -250,7 +250,7 @@ Template Name: TOPページ
         </div>
         <div class="h-10 w-48 lg:w-64 flex justify-center items-center bg-gray-900">
           <div class="text-white text-center">
-            アカウント一覧
+            ライター一覧
           </div>
         </div>
       </div>

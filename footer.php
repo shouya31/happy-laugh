@@ -16,20 +16,20 @@
       <!-- ここからMenu -->
       <div class="hidden lg:block pt-12 pl-8">
         <div class="text-lg font-medium">Menu</div>
-        <div class="text-md text-gray-400 mt-2">Hoem</div>
-        <div class="text-md text-gray-400 mt-2">Ranking</div>
-        <div class="text-md text-gray-400 mt-2">Categories</div>
-        <div class="text-md text-gray-400 mt-2">Writer</div>
+        <div class="text-md text-gray-400 mt-2"><a href="/">Home</a></div>
+        <div class="text-md text-gray-400 mt-2"><a href="/tag/ranking">Ranking</a></div>
+        <div class="text-md text-gray-400 mt-2"><a href="">Categories</a></div>
+        <div class="text-md text-gray-400 mt-2"><a href="">Writer</a></div>
       </div>
       <!-- Menuここまで -->
 
       <!-- ここからCategory -->
       <div class="hidden lg:block pt-12 pl-8">
         <div class="text-lg font-medium">Categories</div>
-        <div class="text-md text-gray-400 mt-2">category1</div>
-        <div class="text-md text-gray-400 mt-2">category2</div>
-        <div class="text-md text-gray-400 mt-2">category3</div>
-        <div class="text-md text-gray-400 mt-2">category4</div>
+        <div class="text-md text-gray-400 mt-2"><a href="/category/コスメ">コスメ</a></div>
+        <div class="text-md text-gray-400 mt-2"><a href="/category/占い・恋愛">占い・恋愛</a></div>
+        <div class="text-md text-gray-400 mt-2"><a href="/category/コスメ">ファッション</a></div>
+        <div class="text-md text-gray-400 mt-2"><a href="/category/コスメ">ライフスタイル</a></div>
       </div>
       <!-- Categoryここまで -->
     </footer>
