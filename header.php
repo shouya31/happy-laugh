@@ -34,9 +34,10 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,viewport-fit=cover">
 		<meta name="format-detection" content="telephone=no" >
 		<meta name="referrer" content="no-referrer-when-downgrade"/>
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/tailwind.css">
+
     <title>HappyLaugh MAGAZINE</title>
 
     <?php wp_head(); ?>
@@ -49,10 +50,10 @@
     <!-- ヘッダー -->
     <header class="shadow-xl">
       <!-- ロゴ -->
-      <div class="flex flex-col items-center pt-4 pb-4 lg:mb-8">
+      <a href="/" class="flex flex-col items-center pt-4 pb-4 lg:mb-8">
         <div class="text-lg lg:text-4xl font-semibold">ハピラフ</div>
         <div class="text-3xl lg:text-6xl font-black">MAGAZINE</div>
-      </div>
+      </a>
       <!-- /ロゴ -->
 
       <!-- メニュー -->
