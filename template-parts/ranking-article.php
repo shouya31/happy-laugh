@@ -9,7 +9,7 @@
     $i = 0;
     $tag_posts = get_posts(array(
         'post_type' => 'post', // 投稿タイプ
-        'tag'    => 'おすすめ', // タグをスラッグで指定する場合
+        'tag'    => 'ランキング', // タグをスラッグで指定する場合
         'posts_per_page' => 10, // 表示件数
         'orderby' => 'date', // 表示順の基準
         'order' => 'ASC' // 昇順・降順

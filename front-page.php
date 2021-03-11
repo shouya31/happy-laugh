@@ -8,29 +8,9 @@ Template Name: TOPページ
 
     <!-- ここからPICKUP -->
     <div class="hidden lg:block h-560 w-full lg:flex justify-center items-center lg:mt-16 mb-48">
-    <?php
-      echo do_shortcode('[smartslider3 slider="2"]');
-      ?>
-      <!-- <div class="h-560 w-3/5 bg-cover bg-no-repeat bg-center">
-        <div class="w-1/6 flex justify-center bg-white">
-          <div class="text-red-300 pt-2 pb-2">
-            CAFE
-          </div>
-        </div>
-        <div class="h-560 w-full flex flex-col justify-center items-center">
-            <div class="w-4/5 text-white text-4xl text-center mb-4">
-              タイトルタイトルタイトルタイトルタイトル<br>
-              タイトルタイトルタイトル
-            </div>
-            <div class="w-full flex justify-center relative">
-              <div class="absolute right-2/3 text-white">2021.03.01</div>
-              <div class="flex">
-                <div class="h-8 w-8 bg-contain bg-no-repeat bg-baby"></div>
-                <div class="text-white ml-4">User</div>
-              </div>
-            </div>
-        </div>
-      </div> -->
+      <?php get_template_part( 'template-parts/top-slide' ); //FVのスライダー読み込み ?>
+
+
     </div>
     <!-- PICKUPここまで -->
 
@@ -42,7 +22,7 @@ Template Name: TOPページ
             CAFE
           </div>
         </div>
-      </div>
+      </div>q
       <div class="p-4">
         <div class="text-2xl mb-2">title</div>
         <div class="text-xs text-gray-300 mb-2">2021.03.04</div>
@@ -73,8 +53,8 @@ Template Name: TOPページ
 
         <!-- ここからREADMORE -->
         <div class="hidden lg:block w-full lg:w-11/12 lg:flex justify-center items-center mt-8">
-          <div class="h-20 w-96 flex justify-center items-center border-4 border-gray-900">
-            <div class="text-3xl text-center font-verdana">
+          <div class="h-16 w-40 flex justify-center items-center border-4 border-gray-900">
+            <div class="text-1xl text-center font-verdana">
               READ MORE
             </div>
           </div>

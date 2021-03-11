@@ -36,7 +36,7 @@
 		<meta name="referrer" content="no-referrer-when-downgrade"/>
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
 
     <title>HappyLaugh MAGAZINE</title>
 

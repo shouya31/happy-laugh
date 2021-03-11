@@ -61,4 +61,17 @@
       <div class="text-white">Copyright ©</div>
     </div>
     <!-- Copyrightここまで -->
-</body></html>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+		loop: true,
+		centeredSlides: true,
+		pagination: '.swiper-pagination',
+		autoplay: 1500,
+        disableOnInteraction: false,
+    });
+  </script>
+</html>
