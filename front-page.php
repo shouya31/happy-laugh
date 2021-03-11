@@ -94,26 +94,27 @@ Template Name: TOPページ
       <!-- ここからスイッチ -->
       <div class="w-full flex border-t border-gray-300">
         <div class="w-1/2 border-b border-gray-900 flex justify-center items-center">
-          <div class="text-2xl font-light pt-2 pb-2 font-verdana">
-            NEW
-          </div>
+          <label class="w-full text-2xl font-light text-center pt-2 pb-2 font-verdana" for="new-toggle">NEW</label>
         </div>
         <div class="w-1/2 border-l border-b border-gray-300 flex justify-center items-center">
-          <div class="text-2xl font-light pt-2 pb-2 font-verdana">
-            RANKING
-          </div>
+          <label class="w-full text-2xl font-light text-center pt-2 pb-2 font-verdana" for="ranking-toggle">RANKING</label>
         </div>
       </div>
       <!-- スイッチここまで -->
 
       <!-- ここから投稿 -->
       <div class="w-full grid grid-cols-2">
+        <input type="radio" class="hidden" name="new-ranking-switch" id="new-toggle" checked="checked"></input>
         <?php get_template_part( 'template-parts/mobile-new-article' ); //NEW投稿一覧読み込み ?>
+      </div>
+      <div class="w-full grid grid-cols-2">
+        <input type="radio" class="hidden" name="new-ranking-switch" id="ranking-toggle"></input>
+        <?php get_template_part( 'template-parts/mobile-ranking-article' ); //NEW投稿一覧読み込み ?>
       </div>
       <!-- 投稿ここまで -->
 
       <!-- ここからREADMORE -->
-      <div class="w-full flex justify-center pt-8 pb-16">
+      <div class="lg:hidden w-full flex justify-center pt-8 pb-16">
         <div class="w-5/12 flex justify-center border-4 border-gray-900">
           <div class="font-extralight pt-2 pb-2">READ MORE</div>
         </div>
