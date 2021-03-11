@@ -33,3 +33,18 @@
   overflow-x: hidden;
   height: 400px;
 }
+#new-toggle:checked ~ #new {
+  display: block;
+}
+
+#new-toggle:not(:checked) ~ #new {
+  display: none;
+}
+
+#ranking-toggle:checked ~ #ranking {
+  display: block;
+}
+
+#ranking-toggle:not(:checked) ~ #ranking {
+  display: none;
+}
