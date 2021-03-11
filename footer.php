@@ -1,4 +1,4 @@
-<footer class="lg:pt-16 h-full lg:h-96 lg:grid lg:grid-cols-3 lg:divide-x lg:divide-graywhite">
+<footer class="lg:pt-16 lg:h-96 lg:grid lg:grid-cols-3 lg:divide-x lg:divide-graywhite">
       <!-- ここからコンセプト -->
       <div class="flex flex-col items-center border-double lg:border-none border-b-4 pt-12 pb-12">
         <div class="text-xl font-semibold">ハピラフ</div>
