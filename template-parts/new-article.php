@@ -13,39 +13,28 @@
       $authorimg = home_url().$imgurl[2];
     }
   ?>
-  <a href="<?php the_permalink(); ?>" class="h-96 lg:h-64 w-11/12 flex flex-col lg:flex-row mb-8">
-    <div class="lg:w-4/12 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
-      <div class="w-2/5 bg-white flex justify-center">
-        <div class="text-red-300 pt-2 pb-2">
-          <?php if (!is_category() && has_category()): ?>
-            <span class="cat-data">
-            <?php
-              $postcat = get_the_category();
-              echo $postcat[0]->name;
-            ?>
-            </span>
-          <?php endif; ?>
+
+  <a class="w-full flex mb-12">
+    <div class="h-56 w-1/3" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
+      <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2">
+        <?php if (!is_category() && has_category()): ?>
+          <?php
+            $postcat = get_the_category();
+            echo $postcat[0]->name;
+          ?>
+        <?php endif; ?>
         </div>
-      </div>
     </div>
-    <div class="h-full flex flex-col lg:w-8/12 lg:ml-3">
-      <div class="h-1/6 flex justify-between items-center mb-2">
-        <time class="text-gray-300">
-          <?php echo get_the_date('Y/m/d'); ?>
-        </time>
+    <div class="h-56 w-2/3 pt-4 pl-8 pb-4">
+      <div class="flex justify-between mb-2">
+        <div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
         <div class="flex">
-          <div class="h-8 w-8 bg-cover bg-center bg-no-repeat"><?php echo get_avatar( $author ); ?></div>
-          <div class="text-gray-300 ml-4"><?php the_author(); ?></div>
+          <div class="h-4 w-4"><?php echo get_avatar( $author ); ?></div>
+          <div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
         </div>
       </div>
-      <div class="h-5/6 w-full">
-        <div class="font-verdana h-2/5 w-full text-2xl pt-2 pb-2"s>
-          <?php the_title(); ?>
-        </div>
-        <div class="font-verdana h-3/5 w-full break-words pt-2 pb-2"s>
-          <?php the_excerpt(); ?>
-        </div>
-      </div>
+      <div class="h-2/6 text-2xl mb-2"><?php the_title(); ?></div>
+      <div class="h-3/6 text-sm text-gray-300 leading-8"><?php the_excerpt(); ?></div>
     </div>
   </a>
   <?php
