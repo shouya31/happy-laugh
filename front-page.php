@@ -40,8 +40,8 @@ Template Name: TOPページ
     <div class="hidden lg:grid grid-cols-2 lg:grid-cols-11 border-t border-gray-300 lg:border-none lg:mb-32">
       <!-- ここからNEWS -->
       <div class="grid-span-1 lg:col-start-2 lg:col-end-8 flex flex-col pl-16">
-        <div class="h-14 w-full lg:h-20 lg:w-9/12 flex justify-center items-center lg:justify-start lg:items-start border-b-2 border-gray-900 lg:border-b-8 lg:border-gray-900 mb-12">
-          <div class="lg:text-5xl lg:font-bold font-verdana">
+        <div class="h-14 w-full lg:h-20 lg:w-11/12 flex justify-center items-center lg:justify-start lg:items-start border-b-2 border-gray-900 lg:border-b-4 lg:border-gray-900 mb-10">
+          <div class="lg:text-5xl font-oswald tracking-wider">
             NEW
           </div>
         </div>

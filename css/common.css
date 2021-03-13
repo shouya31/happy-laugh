@@ -2,6 +2,10 @@
   font-family: Verdana !important;
 }
 
+.font-oswald {
+  font-family: "Oswald" !important;
+}
+
 .swiper-container {
   width: 90%;
   height: 100%;
