@@ -48,29 +48,22 @@
 	</head>
   <body>
     <!-- ヘッダー -->
-    <header class="shadow-xl">
+    <header class="shadow-lg">
       <!-- ロゴ -->
-      <a href="/" class="flex flex-col items-center pt-4 pb-4 lg:mb-8">
-        <div class="text-lg lg:text-4xl font-semibold">ハピラフ</div>
-        <div class="text-3xl lg:text-6xl font-black">MAGAZINE</div>
+      <a href="/" class="flex flex-col items-center py-4 lg:p-0">
+        <div class="text-lg lg:text-xl font-bold tracking-widest">ハピラフ</div>
+        <div class="text-3xl lg:text-4xl font-black tracking-widest">MAGAZINE</div>
       </a>
       <!-- /ロゴ -->
 
       <!-- メニュー -->
-      <div class="hidden lg:flex justify-center border-b-2 border-gray-300 pt-4 pb-4">
-        <div class="w-3/6 flex justify-around">
-          <div><a href="/">Home</a></div>
-          <div><a href="/tag/ranking/">Ranking</a></div>
-          <div><a href="">Categories</a></div>
-          <div><a href="">Writer</a></div>
-        </div>
-      </div>
       <div class="hidden lg:flex justify-center pt-4 pb-4">
-        <div class="w-5/6 flex justify-around">
-          <div><a href="/category/コスメ">コスメ</a></div>
-          <div><a href="/category/占い・恋愛">占い・恋愛</a></div>
-          <div><a href="/category/コスメ">ファッション</a></div>
-          <div><a href="/category/コスメ">ライフスタイル</a></div>
+        <div class="w-7/12 flex justify-around text-xs">
+          <a href="">コスメ</a>
+          <a href="">占い・恋愛</a>
+          <a href="">ファッション</a>
+          <a href="">ライフスタイル</a>
+          <a href="">アカウント一覧</a>
         </div>
       </div>
       <!-- /メニュー -->
