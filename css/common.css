@@ -34,7 +34,7 @@
   height: 400px;
 }
 #new-toggle:checked ~ #new {
-  display: block;
+  display: grid;
 }
 
 #new-toggle:not(:checked) ~ #new {
@@ -42,7 +42,7 @@
 }
 
 #ranking-toggle:checked ~ #ranking {
-  display: block;
+  display: grid;
 }
 
 #ranking-toggle:not(:checked) ~ #ranking {

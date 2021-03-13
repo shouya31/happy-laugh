@@ -22,7 +22,7 @@ Template Name: TOPページ
             CAFE
           </div>
         </div>
-      </div>q
+      </div>
       <div class="p-4">
         <div class="text-2xl mb-2">title</div>
         <div class="text-xs text-gray-300 mb-2">2021.03.04</div>
@@ -72,31 +72,31 @@ Template Name: TOPページ
     <!-- ここからmobileメインコンテンツ -->
     <div class="lg:hidden w-screen">
       <!-- ここからスイッチ -->
-      <div class="w-full flex border-t border-gray-300">
-        <div class="w-1/2 border-b border-gray-900 flex justify-center items-center">
-          <label class="w-full text-2xl font-light text-center pt-2 pb-2 font-verdana" for="new-toggle">NEW</label>
+      <div class="h-14 w-full flex border-t border-gray-300">
+        <div class="w-1/2 flex justify-center items-center border-b border-gray-900">
+          <label class="w-full font-oswald text-xl text-center tracking-widest py-2" for="new-toggle">NEW</label>
         </div>
-        <div class="w-1/2 border-l border-b border-gray-300 flex justify-center items-center">
-          <label class="w-full text-2xl font-light text-center pt-2 pb-2 font-verdana" for="ranking-toggle">RANKING</label>
+        <div class="w-1/2 flex justify-center items-center border-l border-b border-gray-300">
+          <label class="w-full font-oswald text-xl text-center tracking-widest py-2" for="ranking-toggle">RANKING</label>
         </div>
       </div>
       <!-- スイッチここまで -->
 
       <!-- ここから投稿 -->
-      <div class="w-full grid grid-cols-2">
-        <input type="radio" class="hidden" name="new-ranking-switch" id="new-toggle" checked="checked"></input>
+      <input type="radio" class="hidden" name="new-ranking-switch" id="new-toggle" checked="checked"></input>
+      <div class="grid grid-cols-2" id="new">
         <?php get_template_part( 'template-parts/mobile-new-article' ); //NEW投稿一覧読み込み ?>
       </div>
-      <div class="w-full grid grid-cols-2">
-        <input type="radio" class="hidden" name="new-ranking-switch" id="ranking-toggle"></input>
+      <input type="radio" class="hidden" name="new-ranking-switch" id="ranking-toggle"></input>
+      <div class="w-full grid grid-cols-2" id="ranking">
         <?php get_template_part( 'template-parts/mobile-ranking-article' ); //NEW投稿一覧読み込み ?>
       </div>
       <!-- 投稿ここまで -->
 
       <!-- ここからREADMORE -->
       <div class="lg:hidden w-full flex justify-center pt-8 pb-16">
-        <div class="w-5/12 flex justify-center border-4 border-gray-900">
-          <div class="font-extralight pt-2 pb-2">READ MORE</div>
+        <div class="w-5/12 flex justify-center border-2 border-gray-900">
+          <div class="text-sm font-extralight pt-2 pb-2">READ MORE</div>
         </div>
       </div>
       <!-- READMOREここまで -->
