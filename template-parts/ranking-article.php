@@ -1,6 +1,6 @@
-<div class="grid-span-2 w-full lg:col-start-8 lg:col-end-11 lg:flex lg:flex-col lg:justify-self-center pr-16">
+<div class="grid-span-2 w-full lg:col-start-8 lg:col-end-11 lg:flex lg:flex-col lg:justify-self-center pl-24">
   <div class="h-14 lg:w-9/12 flex items-center justify-center lg:justify-start border-l border-b border-gray-300 lg:border-none lg:bg-black mb-8">
-    <div class="text-2xl lg:text-4xl lg:font-light lg:text-white lg:ml-4 font-verdana">
+    <div class="text-2xl lg:text-4xl lg:font-light lg:text-white lg:ml-4 font-oswald">
       RANKING
     </div>
   </div>
