@@ -59,11 +59,10 @@
       <!-- メニュー -->
       <div class="hidden lg:flex justify-center pt-4 pb-4">
         <div class="w-7/12 flex justify-around text-xs">
-          <a href="">コスメ</a>
-          <a href="">占い・恋愛</a>
-          <a href="">ファッション</a>
-          <a href="">ライフスタイル</a>
-          <a href="">アカウント一覧</a>
+					<a href="/category/コスメ">コスメ</a>
+          <a href="/category/占い・恋愛">占い・恋愛</a>
+          <a href="/category/コスメ">ファッション</a>
+          <a href="/category/コスメ">ライフスタイル</a>
         </div>
       </div>
       <!-- /メニュー -->

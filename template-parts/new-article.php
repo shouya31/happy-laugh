@@ -14,7 +14,7 @@
     }
   ?>
 
-  <a class="w-full flex mb-12">
+  <a href="<?php the_permalink(); ?>" class="w-full flex mb-12">
     <div class="h-56 w-1/3" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
       <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2">
         <?php if (!is_category() && has_category()): ?>
@@ -34,7 +34,7 @@
         </div>
       </div>
       <div class="h-2/6 text-2xl mb-2"><?php the_title(); ?></div>
-      <div class="h-3/6 text-sm text-gray-300 leading-8"><?php the_excerpt(); ?></div>
+      <div class="h-3/6 text-sm text-gray-400 leading-8"><?php the_excerpt(); ?></div>
     </div>
   </a>
   <?php

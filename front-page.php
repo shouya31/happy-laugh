@@ -41,7 +41,7 @@ Template Name: TOPページ
       <!-- ここからNEWS -->
       <div class="grid-span-1 lg:col-start-2 lg:col-end-8 flex flex-col pl-16">
         <div class="h-14 w-full lg:h-20 lg:w-11/12 flex justify-center items-center lg:justify-start lg:items-start border-b-2 border-gray-900 lg:border-b-4 lg:border-gray-900 mb-10">
-          <div class="lg:text-5xl font-oswald tracking-wider">
+          <div class="lg:text-5xl font-verdana tracking-wider lg:font-bold">
             NEW
           </div>
         </div>
@@ -74,10 +74,10 @@ Template Name: TOPページ
       <!-- ここからスイッチ -->
       <div class="h-14 w-full flex border-t border-gray-300">
         <div class="w-1/2 flex justify-center items-center border-b border-gray-900">
-          <label class="w-full font-oswald text-xl text-center tracking-widest py-2" for="new-toggle">NEW</label>
+          <label class="w-full font-verdana text-xl text-center tracking-widest py-2" for="new-toggle">NEW</label>
         </div>
         <div class="w-1/2 flex justify-center items-center border-l border-b border-gray-300">
-          <label class="w-full font-oswald text-xl text-center tracking-widest py-2" for="ranking-toggle">RANKING</label>
+          <label class="w-full font-verdana text-xl text-center tracking-widest py-2" for="ranking-toggle">RECOMMEND</label>
         </div>
       </div>
       <!-- スイッチここまで -->
