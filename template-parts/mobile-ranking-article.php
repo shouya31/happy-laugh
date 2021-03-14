@@ -11,20 +11,16 @@
     if($tag_posts): foreach($tag_posts as $post): setup_postdata($post);
     $i++
   ?>
-  <a href="<?php the_permalink(); ?>" class="h-24 w-full flex mb-6">
-    <div class="h-96 w-full flex flex-col items-center p-4" id="new">
-      <div class="h-2/3 w-full bg-cover bg-center" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
-        <div class="w-1/3 bg-black flex justify-center">
-          <div class="text-xs text-white pt-2 pb-2"><?php echo $i; ?></div>
-        </div>
-      </div>
-      <div class="h-2/12 w-full text-xl pt-2 pb-2"><?php the_title(); ?></div>
-      <div class="h-3/12 w-full flex flex-col">
-        <div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
-        <div class="w-full flex items-center">
-          <div class="w-1/6 bg-contain bg-no-repeat bg-center bg-baby"><?php echo get_avatar( $author ); ?></div>
-          <div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
-        </div>
+  <a href="<?php the_permalink(); ?>" class="w-full flex flex-col items-center px-4 pt-6">
+    <div class="h-36 w-full bg-cover bg-center" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
+      <div class="w-3/5 text-xs text-white text=center py-4 bg-black"><?php echo $i; ?></div>
+    </div>
+    <div class="h-20 w-full text-sm pt-4"><?php the_title(); ?></div>
+    <div class="w-full flex flex-col">
+      <div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
+      <div class="w-full flex items-center">
+        <div class="h-4 w-4 bg-cover bg-no-repeat bg-center"><?php echo get_avatar( $author ); ?></div>
+        <div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
       </div>
     </div>
   </a>
