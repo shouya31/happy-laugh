@@ -8535,10 +8535,11 @@ nav.st5,
 	color: #333;
 	font-size: 14px;
 	border-style: none;
-	padding: 10px 25px;
+	padding: 10px 0px;
 	box-sizing: border-box;
 	background-color: transparent;
-	border-radius: 0;
+	border-top-right-radius: 9999px;
+	border-bottom-right-radius: 9999px;
 	background-color: #fff;
 }
 
@@ -8551,11 +8552,13 @@ nav.st5,
 
 input#searchsubmit {
 	margin: 0;
+	padding: 10px 10px;
 	background:#fff;
-	color: #424242;
+	color: #718096;
 	cursor: pointer;
-	padding: 0 15px;
 	border: none;
+	border-top-left-radius: 9999px;
+	border-bottom-left-radius: 9999px;
 }
 
 /*カスタム検索プラグイン*/
