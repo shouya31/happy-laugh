@@ -15,7 +15,7 @@
   ?>
 
   <a href="<?php the_permalink(); ?>" class="w-full flex mb-12">
-    <div class="h-56 w-1/3" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
+    <div class="h-56 w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
       <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2">
         <?php if (!is_category() && has_category()): ?>
           <?php
