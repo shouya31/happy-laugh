@@ -1,7 +1,6 @@
-  <div class="h-14 lg:w-full flex items-center justify-center lg:justify-start border-l border-b border-gray-300 lg:border-none lg:bg-black mb-8">
-    <div class="text-2xl lg:text-4xl lg:font-light lg:text-white lg:ml-4 font-verdana">
-      RANKING
-    </div>
+<div class="mb-24">
+  <div class="h-12 w-full mb-8 text-3xl text-white font-verdana py-2 pl-4 bg-black">
+    RANKING
   </div>
 
   <?php
@@ -32,3 +31,4 @@
     </div>
   </a>
   <?php endforeach; endif; wp_reset_postdata(); ?>
+</div>
