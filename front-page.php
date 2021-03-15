@@ -103,6 +103,16 @@ Template Name: TOPページ
     </div>
     <!-- mobileメインコンテンツここまで -->
 
+    <div class="lg:hidden">
+      <!-- SP_RANKING -->
+      <?php get_template_part( 'template-parts/mobile-ranking-article' ); //RANKING読み込み ?>
+      <!-- /SP_RANKING -->
+
+      <!-- SP_CATEGORY -->
+      <?php get_template_part( 'template-parts/side-category' ); //CATEGORY一覧読み込み ?>
+      <!-- /SP_CATEGORY -->
+    </div>
+
     <!-- ここから帯 -->
     <div class="h-480 w-screen bg-bottom bg-cover flex justify-center items-center">
       <div class="h-240 w-3/4 lg:w-1/2 bg-white bg-opacity-25 flex flex-col justify-around justify-center items-center p-4">
