@@ -1,4 +1,4 @@
-<div id="search" class="search-custom-d">
+<div id="search" class="search-custom-d mb-14">
 	<form method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<label class="hidden" for="s">
 			<?php __( '', 'default' ); ?>
