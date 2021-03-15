@@ -8538,9 +8538,11 @@ nav.st5,
 	padding: 10px 0px;
 	box-sizing: border-box;
 	background-color: transparent;
-	border-top-right-radius: 9999px;
-	border-bottom-right-radius: 9999px;
 	background-color: #fff;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
 }
 
 #searchform {
@@ -8557,8 +8559,6 @@ input#searchsubmit {
 	color: #718096;
 	cursor: pointer;
 	border: none;
-	border-top-left-radius: 9999px;
-	border-bottom-left-radius: 9999px;
 }
 
 /*カスタム検索プラグイン*/
