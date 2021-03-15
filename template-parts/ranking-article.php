@@ -1,8 +1,6 @@
-<div class="grid-span-2 w-full lg:col-start-8 lg:col-end-11 lg:flex lg:flex-col lg:justify-self-center pl-24">
-  <div class="h-14 w-full flex items-center justify-center lg:justify-start border-l border-b border-gray-300 lg:border-none lg:bg-black mb-8">
-    <div class="text-2xl lg:text-4xl lg:font-light lg:text-white lg:ml-4 font-verdana">
-      RANKING
-    </div>
+<div class="mb-24">
+  <div class="h-12 w-full mb-8 text-3xl text-white font-verdana py-2 pl-4 bg-black">
+    RANKING
   </div>
 
   <?php
@@ -19,12 +17,18 @@
     $i++
   ?>
   <a href="<?php the_permalink(); ?>" class="h-24 w-full flex mb-6">
-    <div class="w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
+    <div class="h-full w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
       <div class="w-1/3 bg-black flex justify-center">
         <div class="text-xs text-white pt-2 pb-2"><?php echo $i; ?></div>
       </div>
     </div>
-    <div class="h-full w-2/3 text-sm break-words pl-8 font-verdana"><?php the_title(); ?></div>
+    <div class="h-full w-2/3 text-sm break-words pl-8 font-verdana">
+      <div class="flex mb-1">
+        <div class="text-xs border-2 border-black rounded-full p-1">category</div>
+        <div class="text-xs border-2 border-black rounded-full p-1">category</div>
+      </div>
+      <?php the_title(); ?>
+    </div>
   </a>
   <?php endforeach; endif; wp_reset_postdata(); ?>
 </div>

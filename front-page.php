@@ -64,7 +64,7 @@ Template Name: TOPページ
       <!-- NEWSここまで -->
 
       <!-- ここからRANKING -->
-        <?php get_template_part( 'template-parts/ranking-article' ); //ランキング投稿一覧読み込み ?>
+      <?php get_template_part( 'sidebar' ); //サイドバー読み込み ?>
       <!-- RANKINGここまで -->
     </div>
     <!-- PCメインコンテンツここまで -->
