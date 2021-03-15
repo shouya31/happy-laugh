@@ -23,6 +23,12 @@
         <div class="text-xs text-white pt-2 pb-2"><?php echo $i; ?></div>
       </div>
     </div>
-    <div class="h-full w-2/3 text-sm break-words pl-8 font-verdana"><?php the_title(); ?></div>
+    <div class="h-full w-2/3 text-sm break-words pl-8 font-verdana">
+      <div class="flex mb-1">
+        <div class="text-xs border-2 border-black rounded-full p-1">category</div>
+        <div class="text-xs border-2 border-black rounded-full p-1">category</div>
+      </div>
+      <?php the_title(); ?>
+    </div>
   </a>
   <?php endforeach; endif; wp_reset_postdata(); ?>
