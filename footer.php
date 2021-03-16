@@ -5,11 +5,11 @@
   </div>
   <!-- PC版 -->
   <div class="hidden lg:flex justify-center divide-x divide-black mb-12">
-    <a class="px-4">コスメ</a>
-    <a class="px-4">占い・恋愛</a>
-    <a class="px-4">ファッション</a>
-    <a class="px-4">ライフスタイル</a>
-    <a class="px-4">アカウント一覧</a>
+    <a href="/category/コスメ" class="px-4">コスメ</a>
+    <a href="/category/占い・恋愛" class="px-4">占い・恋愛</a>
+    <a href="/category/ファッション" class="px-4">ファッション</a>
+    <a href="/category/ライフスタイル" class="px-4">ライフスタイル</a>
+    <a href="/category/アカウント一覧" class="px-4">アカウント一覧</a>
   </div>
   <div class="hidden lg:flex justify-center mb-16">
     <a class="px-4">ABOUT</a>
@@ -30,11 +30,11 @@
     </div>
     <div class="pl-8">
       <div class="mb-4">Categories</div>
-      <div class="text-xs text-gray-400 mb-3">コスメ</div>
-      <div class="text-xs text-gray-400 mb-3">占い・恋愛</div>
-      <div class="text-xs text-gray-400 mb-3">ファッション</div>
-      <div class="text-xs text-gray-400 mb-3">ライフスタイル</div>
-      <div class="text-xs text-gray-400 mb-3">アカウント一覧</div>
+      <div href="/category/コスメ" class="text-xs text-gray-400 mb-3">コスメ</div>
+      <div href="/category/占い・恋愛" class="text-xs text-gray-400 mb-3">占い・恋愛</div>
+      <div href="/category/ファッション" class="text-xs text-gray-400 mb-3">ファッション</div>
+      <div href="/category/ライフスタイル" class="text-xs text-gray-400 mb-3">ライフスタイル</div>
+      <div href="/category/アカウント一覧" class="text-xs text-gray-400 mb-3">アカウント一覧</div>
     </div>
   </div>
   <!-- /SP版 -->
