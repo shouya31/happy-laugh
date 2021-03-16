@@ -3,21 +3,19 @@
     RECOMMEND
   </div>
 
-  <?php if ( have_posts() ) : ?>
-    <?php
-      $args = array( "posts_per_page" => 4, );
-      $postslist = get_posts( $args );
-      foreach ( $postslist as $post ) :
-        setup_postdata( $post ); ?>
-
-      <?php
-        $author = get_the_author_meta('id');
-        $author_img = get_avatar($author);
-        $imgtag= '/<img.*?src=(["\'])(.+?)\1.*?>/i';
-        if(preg_match($imgtag, $author_img, $imgurl)){
-          $authorimg = home_url().$imgurl[2];
-        }
-      ?>
+  <?php
+    $i = 0;
+    $tag_posts = get_posts(array(
+        'post_type' => 'post', // 投稿タイプ
+        'tag'    => 'おすすめ', // タグをスラッグで指定する場合
+        'posts_per_page' => 4, // 表示件数
+        'orderby' => 'date', // 表示順の基準
+        'order' => 'ASC' // 昇順・降順
+    ));
+    global $post;
+    if($tag_posts): foreach($tag_posts as $post): setup_postdata($post);
+    $i++
+  ?>
 
       <a href="<?php the_permalink(); ?>" class="w-full flex mb-12">
         <div class="h-56 w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
@@ -42,11 +40,5 @@
           <div class="h-3/6 text-sm text-gray-400 leading-8"><?php the_excerpt(); ?></div>
         </div>
       </a>
-    <?php
-      endforeach;
-      wp_reset_postdata();
-    ?>
-  <?php else : ?>
-      <!-- 記事が1件も見つからなかったときの処理 -->
-  <?php endif; ?>
+  <?php endforeach; endif; wp_reset_postdata(); ?>
 </div>
