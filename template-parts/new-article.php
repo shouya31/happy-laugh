@@ -25,16 +25,20 @@
         <?php endif; ?>
         </div>
     </div>
-    <div class="h-56 w-2/3 pt-4 pl-8 pb-4">
-      <div class="flex justify-between mb-2">
+    <div class="h-56 w-2/3 py-1 pl-8">
+      <div class="flex mb-1">
+        <div class="text-xs border-2 border-black rounded-full p-1">カテゴリー</div>
+        <div class="text-xs border-2 border-black rounded-full p-1">カテゴリー</div>
+      </div>
+      <div class="flex justify-between mb-1">
         <div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
         <div class="flex">
           <div class="h-4 w-4"><?php echo get_avatar( $author ); ?></div>
           <div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
         </div>
       </div>
-      <div class="h-2/6 text-2xl mb-2"><?php the_title(); ?></div>
-      <div class="h-3/6 text-sm text-gray-400 leading-8"><?php the_excerpt(); ?></div>
+      <div class="h-24 text-2xl mb-1"><?php the_title(); ?></div>
+      <div class="h-16 text-sm text-gray-400"><?php the_excerpt(); ?></div>
     </div>
   </a>
   <?php
