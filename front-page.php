@@ -39,8 +39,8 @@ Template Name: TOPページ
     <!-- ここからPCメインコンテンツ -->
     <div class="hidden lg:grid grid-cols-2 grid-cols-11 mb-32">
       <?php get_template_part( 'template-parts/recommend-article' ); //RECOMMEND記事読み込み ?>
-      <?php get_template_part( 'template-parts/new-article' ); //NEW投稿一覧読み込み ?>
       <?php get_template_part( 'sidebar' ); //サイドバー読み込み ?>
+      <?php get_template_part( 'template-parts/new-article' ); //NEW投稿一覧読み込み ?>
     </div>
     <!-- PCメインコンテンツここまで -->
 
