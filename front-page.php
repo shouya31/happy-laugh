@@ -37,34 +37,10 @@ Template Name: TOPページ
     <!-- mobilePICKUPここから -->
 
     <!-- ここからPCメインコンテンツ -->
-    <div class="hidden lg:grid grid-cols-2 lg:grid-cols-11 border-t border-gray-300 lg:border-none lg:mb-32">
-      <?php get_template_part( 'template-parts/recommend-article' ); //RECOMEND記事読み込み ?>
-      <!-- ここからNEWS -->
-      <div class="grid-span-1 lg:col-start-2 lg:col-end-8 flex flex-col pl-16">
-        <div class="w-11/12 text-5xl font-verdana border-b-4 border-black pl-1 pb-5 mb-8">
-          NEW
-        </div>
-
-        <!-- ここから投稿 -->
-        <?php get_template_part( 'template-parts/new-article' ); //投稿一覧読み込み ?>
-
-        <!-- 投稿ここまで -->
-
-        <!-- ここからREADMORE -->
-        <div class="hidden lg:block w-full lg:w-11/12 lg:flex justify-center items-center mt-8">
-          <div class="h-16 w-40 flex justify-center items-center border-4 border-gray-900">
-            <div class="text-1xl text-center font-verdana">
-              READ MORE
-            </div>
-          </div>
-        </div>
-        <!-- READMOREここまで-->
-      </div>
-      <!-- NEWSここまで -->
-
-      <!-- ここからRANKING -->
+    <div class="hidden lg:grid grid-cols-2 grid-cols-11 mb-32">
+      <?php get_template_part( 'template-parts/recommend-article' ); //RECOMMEND記事読み込み ?>
+      <?php get_template_part( 'template-parts/new-article' ); //NEW投稿一覧読み込み ?>
       <?php get_template_part( 'sidebar' ); //サイドバー読み込み ?>
-      <!-- RANKINGここまで -->
     </div>
     <!-- PCメインコンテンツここまで -->
 
