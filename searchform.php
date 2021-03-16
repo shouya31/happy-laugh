@@ -1,5 +1,5 @@
 <div class="rounded-full border border-black mb-14">
-	<form method="get" class="flex justify-center" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<form method="get" class="h-12 flex justify-center" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<label class="hidden" for="s">
 			<?php __( '', 'default' ); ?>
 		</label>

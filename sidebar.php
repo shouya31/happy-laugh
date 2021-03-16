@@ -16,11 +16,10 @@
 		} else {
 
 	?>
-<div class="grid-span-2 col-start-8 col-end-11 w-full flex flex-col justify-self-center pl-20 pr-6">
+
 	<?php get_template_part( 'searchform' ); //検索バー読み込み ?>
 	<?php get_template_part( 'template-parts/ranking-article' ); //ランキング投稿一覧読み込み ?>
 	<?php get_template_part( 'template-parts/side-category' ); //カテゴリリンク一覧読み込み ?>
-</div>
 <!-- /#side -->
 <?php }
 } ?>

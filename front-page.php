@@ -64,7 +64,9 @@ Template Name: TOPページ
       <!-- NEWSここまで -->
 
       <!-- ここからRANKING -->
-      <?php get_template_part( 'sidebar' ); //サイドバー読み込み ?>
+      <div class="col-start-8 col-end-11 w-full flex flex-col justify-self-center pl-20 pr-6">
+        <?php get_template_part( 'sidebar' ); //サイドバー読み込み ?>
+      </div>
       <!-- RANKINGここまで -->
     </div>
     <!-- PCメインコンテンツここまで -->

@@ -8535,7 +8535,9 @@ nav.st5,
 	color: #333;
 	font-size: 14px;
 	border-style: none;
+	border-radius: 9999px;
 	padding: 10px 0px;
+	margin: 0px;
 	box-sizing: border-box;
 	background-color: transparent;
 	background-color: #fff;
@@ -9952,7 +9954,6 @@ footer {
 main {
 	padding: 20px 15px;
 	margin: 0 0 20px;
-	background:#fff;
 }
 
 .post {
@@ -10808,7 +10809,6 @@ ul.wp-block-latest-posts,
 	}
 
 	main {
-		background-color: #fff;
 		padding: 20px 30px;
     	padding-right: calc(constant(safe-area-inset-right) + 10px); /* iPhoneX */
     	padding-left: calc(constant(safe-area-inset-left) + 10px); /* iPhoneX */
