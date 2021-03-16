@@ -38,6 +38,7 @@ Template Name: TOPページ
 
     <!-- ここからPCメインコンテンツ -->
     <div class="hidden lg:grid grid-cols-2 lg:grid-cols-11 border-t border-gray-300 lg:border-none lg:mb-32">
+      <?php get_template_part( 'template-parts/recommend-article' ); //RECOMEND記事読み込み ?>
       <!-- ここからNEWS -->
       <div class="grid-span-1 lg:col-start-2 lg:col-end-8 flex flex-col pl-16">
         <div class="h-14 w-full lg:h-20 lg:w-11/12 flex justify-center items-center lg:justify-start lg:items-start border-b-2 border-gray-900 lg:border-b-4 lg:border-gray-900 mb-10">
