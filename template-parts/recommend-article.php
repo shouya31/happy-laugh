@@ -1,5 +1,5 @@
 <div class="grid-span-1 col-start-2 col-end-8 flex flex-col pl-16">
-  <div class="w-11/12 text-5xl font-verdana border-b-4 border-black pl-1 pb-4 mb-8">
+  <div class="w-11/12 text-5xl font-verdana border-b-4 border-black pl-1 pb-5 mb-8">
     RECOMMEND
   </div>
 

@@ -41,10 +41,8 @@ Template Name: TOPページ
       <?php get_template_part( 'template-parts/recommend-article' ); //RECOMEND記事読み込み ?>
       <!-- ここからNEWS -->
       <div class="grid-span-1 lg:col-start-2 lg:col-end-8 flex flex-col pl-16">
-        <div class="h-14 w-full lg:h-20 lg:w-11/12 flex justify-center items-center lg:justify-start lg:items-start border-b-2 border-gray-900 lg:border-b-4 lg:border-gray-900 mb-10">
-          <div class="lg:text-5xl font-verdana tracking-wider lg:font-bold">
-            NEW
-          </div>
+        <div class="w-11/12 text-5xl font-verdana border-b-4 border-black pl-1 pb-5 mb-8">
+          NEW
         </div>
 
         <!-- ここから投稿 -->
