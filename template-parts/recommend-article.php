@@ -29,10 +29,6 @@
           </div>
       </div>
       <div class="h-56 w-2/3 py-1 pl-8">
-        <div class="flex mb-1">
-          <div class="text-xs border-2 border-black rounded-full p-1">カテゴリー</div>
-          <div class="text-xs border-2 border-black rounded-full p-1">カテゴリー</div>
-        </div>
         <div class="flex justify-between mb-1">
           <div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
           <div class="flex">
