@@ -1,66 +1,46 @@
-<footer class="lg:pt-16 lg:h-96 lg:grid lg:grid-cols-3 lg:divide-x lg:divide-graywhite">
-      <!-- ここからコンセプト -->
-      <div class="flex flex-col items-center border-double lg:border-none border-b-4 pt-12 pb-12">
-        <div class="text-xl font-semibold">ハピラフ</div>
-        <div class="text-4xl font-black">MAGAZINE</div>
-        <div class="text-md text-center text-gray-300 mt-8">
-          texttexttexttexttexttexttexttexttext<br>
-          texttexttexttexttexttexttext<br>
-          texttexttexttexttexttexttexttext<br>
-          texttexttexttexttext<br>
-          texttexttexttexttexttexttext
-        </div>
-      </div>
-      <!-- コンセプトここまで -->
+<footer>
+  <div class="flex flex-col items-center border-double border-b-4 lg:border-none py-4 lg:py-16">
+    <div class="text-md lg:text-xl font-bold tracking-widest">ハピラフ</div>
+    <div class="text-2xl lg:text-4xl font-black tracking-widest">MAGAZINE</div>
+  </div>
+  <!-- PC版 -->
+  <div class="hidden lg:flex justify-center divide-x divide-black mb-12">
+    <a href="/category/コスメ" class="px-4">コスメ</a>
+    <a href="/category/占い・恋愛" class="px-4">占い・恋愛</a>
+    <a href="/category/ファッション" class="px-4">ファッション</a>
+    <a href="/category/ライフスタイル" class="px-4">ライフスタイル</a>
+    <a href="/category/アカウント一覧" class="px-4">アカウント一覧</a>
+  </div>
+  <div class="hidden lg:flex justify-center mb-16">
+    <a class="px-4">ABOUT</a>
+    <a class="px-4">WRITER</a>
+    <a class="px-4">運営会社</a>
+    <a class="px-4">プライバシーポリシー</a>
+  </div>
+  <!-- /PC版 -->
 
-      <!-- ここからMenu -->
-      <div class="hidden lg:block pt-12 pl-8">
-        <div class="text-lg font-medium">Menu</div>
-        <div class="text-md text-gray-400 mt-2"><a href="/">Home</a></div>
-        <div class="text-md text-gray-400 mt-2"><a href="/tag/ranking">Ranking</a></div>
-        <div class="text-md text-gray-400 mt-2"><a href="">Categories</a></div>
-        <div class="text-md text-gray-400 mt-2"><a href="">Writer</a></div>
-      </div>
-      <!-- Menuここまで -->
-
-      <!-- ここからCategory -->
-      <div class="hidden lg:block pt-12 pl-8">
-        <div class="text-lg font-medium">Categories</div>
-        <div class="text-md text-gray-400 mt-2"><a href="/category/コスメ">コスメ</a></div>
-        <div class="text-md text-gray-400 mt-2"><a href="/category/占い・恋愛">占い・恋愛</a></div>
-        <div class="text-md text-gray-400 mt-2"><a href="/category/コスメ">ファッション</a></div>
-        <div class="text-md text-gray-400 mt-2"><a href="/category/コスメ">ライフスタイル</a></div>
-      </div>
-      <!-- Categoryここまで -->
-    </footer>
+  <!-- SP版 -->
+  <div class="grid grid-cols-2 pt-8 pb-4 lg:hidden">
+    <div class="pl-8">
+      <div class="mb-4">Pages</div>
+      <div class="text-xs text-gray-400 mb-3">ABOUT</div>
+      <div class="text-xs text-gray-400 mb-3">Writer</div>
+      <div class="text-xs text-gray-400 mb-3">運営会社</div>
+      <div class="text-xs text-gray-400">プライバシーポリシー</div>
+    </div>
+    <div class="pl-8">
+      <div class="mb-4">Categories</div>
+      <div href="/category/コスメ" class="text-xs text-gray-400 mb-3">コスメ</div>
+      <div href="/category/占い・恋愛" class="text-xs text-gray-400 mb-3">占い・恋愛</div>
+      <div href="/category/ファッション" class="text-xs text-gray-400 mb-3">ファッション</div>
+      <div href="/category/ライフスタイル" class="text-xs text-gray-400 mb-3">ライフスタイル</div>
+      <div href="/category/アカウント一覧" class="text-xs text-gray-400 mb-3">アカウント一覧</div>
+    </div>
+  </div>
+  <!-- /SP版 -->
+  <div class="text-white text-center bg-black">© 2021 ハピラフ</div>
+</footer>
     <!-- Footerここまで -->
-
-    <!-- ここからMoboleFooter -->
-    <div class="grid grid-cols-2 pt-8 pb-8 lg:hidden">
-      <!-- ここからMobileMenu -->
-      <div class="grid-span-1 pl-4">
-        <div class="text-xl mb-4">Menu</div>
-        <div class="text-base text-gray-500 mb-2">HOME</div>
-        <div class="text-base text-gray-500 mb-2">RANKING</div>
-      </div>
-      <!-- MobileMenuここまで -->
-      <!-- ここからMobileCategory -->
-      <div class="grid-span-2 pl-4">
-        <div class="text-xl mb-4">Categories</div>
-        <div class="text-base text-gray-500 mb-2">categoy1</div>
-        <div class="text-base text-gray-500 mb-2">categoy2</div>
-        <div class="text-base text-gray-500 mb-2">categoy3</div>
-        <div class="text-base text-gray-500 mb-2">categoy4</div>
-        <div class="text-base text-gray-500 mb-2">categoy5</div>
-      </div>
-      <!-- MobileCategoryここまで -->
-    </div>
-    <!-- ここからMoboleFooter -->
-    <!-- ここからCopyright -->
-    <div class="h-12 bg-black flex items-center pl-8 lg:hidden">
-      <div class="text-white">Copyright ©</div>
-    </div>
-    <!-- Copyrightここまで -->
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
 <script>
