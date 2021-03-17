@@ -25,9 +25,10 @@
     <div class="h-full w-2/3 text-sm break-words pl-8 font-verdana">
       <?php the_title(); ?>
       <div class="flex mb-1">
-        <div class="text-xs border-2 border-black rounded-full p-1">category</div>
+        <div class="text-xs border border-black rounded-full p-1">category</div>
       </div>
     </div>
+
   </a>
   <?php endforeach; endif; wp_reset_postdata(); ?>
 </div>
