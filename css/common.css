@@ -37,6 +37,11 @@
   overflow-x: hidden;
   height: 400px;
 }
+
+/* #new-toggle:not(:checked) ~ #new-switch {
+  border-color: rgba(209, 213, 219, var(--tw-border-opacity));
+} */
+
 #new-toggle:checked ~ #new {
   display: grid;
 }
@@ -45,10 +50,10 @@
   display: none;
 }
 
-#ranking-toggle:checked ~ #ranking {
+#recommend-toggle:checked ~ #recommend{
   display: grid;
 }
 
-#ranking-toggle:not(:checked) ~ #ranking {
+#recommend-toggle:not(:checked) ~ #recommend {
   display: none;
 }
