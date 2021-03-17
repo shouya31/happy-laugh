@@ -40,7 +40,7 @@
             <div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
           </div>
         </div>
-        <div class="h-24 text-2xl mb-1"><?php the_title(); ?></div>
+        <div class="text-2xl mb-3"><?php the_title(); ?></div>
         <div class="h-16 text-sm text-gray-400"><?php the_excerpt(); ?></div>
       </div>
     </a>
