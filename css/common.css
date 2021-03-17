@@ -7,15 +7,15 @@
 }
 
 .swiper-container {
-  width: 55%;
+  width: 90%;
   height: 100%;
-  overflow: visible !important;
 }
 
 .swiper-slide {
   width: 40%;
   height: auto;
   overflow: visible;
+  text-align: center;
   font-size: 18px;
   background: #fff;
   /* Center slide text vertically */
@@ -35,7 +35,7 @@
 
 .mainvisual {
   overflow-x: hidden;
-  height: 480px;
+  height: 400px;
 }
 
 /* #new-toggle:not(:checked) ~ #new-switch {

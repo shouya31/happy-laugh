@@ -16,14 +16,24 @@
       ?>
         <a
           href="<?php the_permalink(); ?>"
-          class="swiper-slide w-3/5 bg-cover bg-no-repeat bg-center flex items-end"
+          class="swiper-slide h-560 w-3/5 bg-cover bg-no-repeat bg-center"
           style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);"
         >
-          <div class="w-full bg-black bg-opacity-75 p-6">
-            <div class="text-white mb-4">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</div>
-            <div class="flex">
-              <div class="text-sm text-white border-2 border-white rounded-full p-2">カテゴリー</div>
-              <div class="text-sm text-white border-2 border-white rounded-full p-2">カテゴリー</div>
+          <div class="w-1/6 flex justify-center bg-white">
+            <div class="text-red-300 pt-2 pb-2 font-verdana">
+              CAFE
+            </div>
+          </div>
+          <div class="h-560 w-full flex flex-col justify-center items-center">
+            <div class="w-4/5 text-white text-4xl text-center mb-4 font-verdana">
+              <?php the_title(); ?>
+            </div>
+            <div class="w-full flex justify-center relative">
+              <div class="absolute right-2/3 text-white">2021.03.01</div>
+              <div class="flex">
+                <div class="h-8 w-8 bg-contain bg-no-repeat bg-baby"></div>
+                <div class="text-white ml-4">User</div>
+              </div>
             </div>
           </div>
         </a>
