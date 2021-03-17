@@ -1,3 +1,8 @@
+<div class="grid-span-1 lg:col-start-2 lg:col-end-8 flex flex-col pl-16">
+  <div class="w-11/12 text-5xl font-verdana border-b-4 border-black pl-1 pb-5 mb-8">
+    NEW
+  </div>
+
 <?php if ( have_posts() ) : ?>
   <?php
     $args = array( "posts_per_page" => 7, );
@@ -45,6 +50,14 @@
     endforeach;
     wp_reset_postdata();
   ?>
+  <div class="hidden lg:block w-full lg:w-11/12 lg:flex justify-center items-center mt-8">
+    <div class="h-16 w-40 flex justify-center items-center border-4 border-gray-900">
+      <div class="text-1xl text-center font-verdana">
+        READ MORE
+      </div>
+    </div>
+  </div>
 <?php else : ?>
     <!-- 記事が1件も見つからなかったときの処理 -->
 <?php endif; ?>
+</div>
