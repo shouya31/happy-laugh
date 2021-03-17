@@ -70,7 +70,7 @@ Template Name: TOPページ
 
       <!-- ここからREADMORE -->
       <div class="lg:hidden w-full flex justify-center pt-8 pb-16">
-        <div class="w-5/12 flex justify-center border-2 border-gray-900">
+        <div class="w-5/12 flex justify-center border border-gray-900">
           <div class="text-sm font-extralight pt-2 pb-2">READ MORE</div>
         </div>
       </div>

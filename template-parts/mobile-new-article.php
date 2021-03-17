@@ -25,10 +25,6 @@
       </div>
     </div>
     <div class="h-20 w-full text-sm pt-4"><?php the_title(); ?></div>
-    <div class="w-full flex mb-2">
-      <div class="text-xs border-2 border-black rounded-full p-1">カテゴリー</div>
-      <div class="text-xs border-2 border-black rounded-full p-1">カテゴリー</div>
-    </div>
     <div class="w-full flex justify-between">
       <div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
       <div class="flex">

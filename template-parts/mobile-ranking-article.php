@@ -24,7 +24,6 @@
       <!-- 仮置のカテゴリ表示 -->
       <div class="flex">
         <div class="text-xs rounded-full border border-black p-1">category</div>
-        <div class="text-xs rounded-full border border-black p-1">category</div>
       </div>
       <!-- /仮置のカテゴリ表示 -->
       <div class="text-sm"><?php the_title(); ?></div>
