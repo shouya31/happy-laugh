@@ -6582,3 +6582,46 @@ $stplus = '';
 if (locate_template('/st-plus.php') !== '') {
 require_once locate_template('/st-plus.php');
 }
+
+//記事閲覧数を取得する
+function getPostViews($postID){
+  $count_key = 'post_views_count';
+  $count = get_post_meta($postID, $count_key, true);
+  if($count==''){
+    delete_post_meta($postID, $count_key);
+    add_post_meta($postID, $count_key, '0');
+    return "0 View";
+  }
+  return $count.' Views';
+}
+//記事閲覧数を保存する
+function setPostViews($postID) {
+  $count_key = 'post_views_count';
+  $count = get_post_meta($postID, $count_key, true);
+  if($count==''){
+    $count = 0;
+    delete_post_meta($postID, $count_key);
+    add_post_meta($postID, $count_key, '0');
+  }else{
+    $count++;
+    update_post_meta($postID, $count_key, $count);
+  }
+}
+//headに出力されるタグを削除(閲覧数を重複してカウントするのを防止するため)
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+
+//クローラーのアクセス判別
+function is_bot() {
+  $ua = $SERVER[HTTP_USER_AGENT];
+  $bot = array(
+    "googlebot",
+    "msnbot",
+    "yahoo"
+  );
+  foreach( $bot as $bot ) {
+    if (stripos( $ua, $bot ) !== false){
+      return true;
+    }
+  }
+  return false;
+}

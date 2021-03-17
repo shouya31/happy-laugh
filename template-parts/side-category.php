@@ -1,4 +1,4 @@
-<div class="lg:h-12 lg:text-3xl lg:text-white lg:bg-black lg:mx-0 lg:pl-4 text-lg border-b-4 border-black font-verdana mx-4 mb-8 py-2 pl-2">
+<div class="lg:h-12 lg:text-3xl lg:text-white lg:bg-black lg:mx-0 lg:pl-4 text-lg border-b-4 border-black font-bold mx-4 mb-8 py-2 pl-2">
   CATEGORY
 </div>
   <div class="flex flex-col ml-8 mb-4 lg:mb-8">
