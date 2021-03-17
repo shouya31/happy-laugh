@@ -37,7 +37,7 @@ Template Name: TOPページ
     <!-- mobilePICKUPここから -->
 
     <!-- ここからPCメインコンテンツ -->
-    <div class="hidden lg:grid grid-rows-2 grid-cols-11 mb-32">
+    <div class="hidden lg:grid grid-cols-2 grid-cols-11 mb-32">
       <?php get_template_part( 'template-parts/recommend-article' ); //RECOMMEND記事読み込み ?>
       <?php get_template_part( 'sidebar' ); //サイドバー読み込み ?>
       <?php get_template_part( 'template-parts/new-article' ); //NEW投稿一覧読み込み ?>
@@ -52,7 +52,7 @@ Template Name: TOPページ
           <label class="w-full font-bold text-xl text-center tracking-widest py-2" for="new-toggle">NEW</label>
         </div>
         <div class="w-1/2 flex justify-center items-center border-l border-b border-gray-300">
-          <label class="w-full font-bold text-xl text-center tracking-widest py-2" for="ranking-toggle">RECOMMEND</label>
+          <label class="w-full font-bold text-xl text-center tracking-widest py-2" for="recommend-toggle">RECOMMEND</label>
         </div>
       </div>
       <!-- スイッチここまで -->
