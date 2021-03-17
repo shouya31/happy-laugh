@@ -1,5 +1,5 @@
 <div class="mb-24">
-  <div class="h-12 w-full mb-8 text-3xl text-white font-verdana py-2 pl-4 bg-black">
+  <div class="h-12 w-full mb-8 text-3xl text-white font-bold py-2 pl-4 bg-black">
     RANKING
   </div>
 
@@ -23,10 +23,10 @@
       </div>
     </div>
     <div class="h-full w-2/3 text-sm break-words pl-8 font-verdana">
-      <?php the_title(); ?>
       <div class="flex mb-1">
-        <div class="text-xs border border-black rounded-full p-1">category</div>
+        <div class="ranking-category text-xs border border-black rounded-full p-1">コスメ</div>
       </div>
+      <?php the_title(); ?>
     </div>
 
   </a>
