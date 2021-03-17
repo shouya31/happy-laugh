@@ -49,10 +49,10 @@ Template Name: TOPページ
       <!-- ここからスイッチ -->
       <div class="h-14 w-full flex border-t border-gray-300">
         <div class="w-1/2 flex justify-center items-center border-b border-gray-900">
-          <label class="w-full font-verdana text-xl text-center tracking-widest py-2" for="new-toggle">NEW</label>
+          <label class="w-full font-bold text-xl text-center tracking-widest py-2" for="new-toggle">NEW</label>
         </div>
         <div class="w-1/2 flex justify-center items-center border-l border-b border-gray-300">
-          <label class="w-full font-verdana text-xl text-center tracking-widest py-2" for="recommend-toggle">RECOMMEND</label>
+          <label class="w-full font-bold text-xl text-center tracking-widest py-2" for="ranking-toggle">RECOMMEND</label>
         </div>
       </div>
       <!-- スイッチここまで -->
@@ -81,7 +81,7 @@ Template Name: TOPページ
     </div>
 
     <!-- ここから帯 -->
-    <div class="h-480 w-screen bg-bottom bg-cover flex justify-center items-center">
+    <div class="h-480 w-screen bg-bottom bg-cover flex justify-center items-center" style="height: 480px;background-image: url('/wp-content/themes/affinger5/images/writer-intro.png');">
       <div class="h-240 w-3/4 lg:w-1/2 bg-white bg-opacity-25 flex flex-col justify-around justify-center items-center p-4">
         <div class="h-24 w-11/12 lg:w-5/6 text-2xl text-center break-words">
           texttexttexttext<br>
