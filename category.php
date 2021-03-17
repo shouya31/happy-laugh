@@ -61,12 +61,15 @@ $has_thumbnail     = st_has_term_thumbnail();
 
 		if(trim($cat_data['listdelete']) === ''){
                      //一覧を表示する場合　?>
-                        <div class="post">
-                        <?php if(trim($cat_data['st_cattitle']) !== ''){ ?>
-                            <h1 class="entry-title"><?php echo esc_html($cat_data['st_cattitle']) ?></h1>
-                        <?php }else{ ?>
-                            <h1 class="entry-title"><?php single_cat_title(); ?></h1>
-                        <?php } ?>
+
+<div class="grid grid-cols-11">
+	<div class="col-start-2 col-end-8 pl-14">
+		<div class="post">
+			<?php if(trim($cat_data['st_cattitle']) !== ''){ ?>
+				<div class="text-4xl border-b-4 border-black entry-title"><?php echo esc_html($cat_data['st_cattitle']) ?></div>
+			<?php }else{ ?>
+				<div class="w-11/12 text-4xl border-b-4 border-black pl-2 pb-4"><?php single_cat_title(); ?></div>
+			<?php } ?>
 
 			<?php if ( is_active_sidebar( 21 ) ) { ?>
 				<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 21 ) ) : else : //カテゴリページ上一括ウィジェット ?>
@@ -75,9 +78,9 @@ $has_thumbnail     = st_has_term_thumbnail();
 
 			<?php if(!is_paged()){ ?>
 				<div id="nocopy" <?php st_text_copyck(); ?>>
-					<?php if ( $is_thumbnal_under && $has_thumbnail ): // サムネイル ?>
-						<?php get_template_part( 'st-category-eyecatch' ); ?>
-					<?php endif; ?>
+				<?php if ( $is_thumbnal_under && $has_thumbnail ): // サムネイル ?>
+					<?php get_template_part( 'st-category-eyecatch' ); ?>
+				<?php endif; ?>
 
 					<div class="entry-content">
 						<?php echo apply_filters('the_content',category_description()); //コンテンツを表示 ?>
@@ -85,62 +88,66 @@ $has_thumbnail     = st_has_term_thumbnail();
 				</div>
 				<?php get_template_part( 'popular-thumbnail' ); //任意のエントリ ?>
 			<?php } ?>
+		</div><!-- /post -->
 
-                        </div><!-- /post -->
-
-			<?php if( category_description() && (!is_paged()) ){ //コンテンツがある場合 ?>
-				<?php if ( isset($GLOBALS['stplus']) && $GLOBALS['stplus'] === 'yes' ) {
-					get_template_part( 'st-rank' ); //ランキング
-				} ?>
-				<?php if( trim($cat_data['snscat'] ) !== '' ):
-					get_template_part( 'sns-cat' ); //ソーシャルボタン読み込み
-				endif; ?>
-				<div class="cat-itiran" style="padding-top:20px;">
-			<?php } ?>
-
-                        		<?php get_template_part( 'itiran' ); //投稿一覧読み込み ?>
-                       			<?php get_template_part( 'st-pagenavi' ); //ページナビ読み込み ?>
-
-			<?php if( category_description() && (!is_paged()) ){ //コンテンツがある場合 ?>
-				</div>
-			<?php }else{
+		<?php if( category_description() && (!is_paged()) ){ //コンテンツがある場合 ?>
+			<?php if ( isset($GLOBALS['stplus']) && $GLOBALS['stplus'] === 'yes' ) {
 				get_template_part( 'st-rank' ); //ランキング
 			} ?>
-
-		<?php }else{ //一覧を表示しない ?>
-
-                        <div class="post">
-                        <?php if(trim($cat_data['st_cattitle']) !== ''){ ?>
-                            <h1 class="entry-title"><?php echo esc_html($cat_data['st_cattitle']) ?></h1>
-                        <?php }else{ ?>
-                            <h1 class="entry-title">「<?php single_cat_title(); ?>」 一覧</h1>
-                        <?php } ?>
-
-			<?php if ( is_active_sidebar( 21 ) ) { ?>
-				<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 21 ) ) : else : //カテゴリページ上一括ウィジェット ?>
-				<?php endif; ?>
-			<?php } ?>
-
-			<div id="nocopy" <?php st_text_copyck(); ?>>
-				<?php if ( $is_thumbnal_under && $has_thumbnail ): // サムネイル ?>
-					<?php get_template_part( 'st-category-eyecatch' ); ?>
-				<?php endif; ?>
-
-				<div class="entry-content">
-					<?php echo apply_filters('the_content',category_description()); //コンテンツを表示 ?>
-				</div>
-			</div>
-			<?php get_template_part( 'popular-thumbnail' ); //任意のエントリ ?>
-
-			<?php if(trim($cat_data['snscat']) !== '' && (category_description())){ //コンテンツがある場合 ?>
-				<?php if ( isset($GLOBALS['stplus']) && $GLOBALS['stplus'] === 'yes' ) {
-					get_template_part( 'st-rank' ); //ランキング
-				} ?>
-				<?php get_template_part( 'sns-cat' ); //ソーシャルボタン読み込み ?>
-			<?php } ?>
-
-                        </div><!-- /post -->
+			<?php if( trim($cat_data['snscat'] ) !== '' ):
+			get_template_part( 'sns-cat' ); //ソーシャルボタン読み込み
+			endif; ?>
+			<div class="cat-itiran" style="padding-top:20px;">
 		<?php } ?>
+
+		<?php get_template_part( 'itiran' ); //投稿一覧読み込み ?>
+		<?php get_template_part( 'st-pagenavi' ); //ページナビ読み込み ?>
+
+		<?php if( category_description() && (!is_paged()) ){ //コンテンツがある場合 ?>
+			</div>
+		<?php }else{
+			get_template_part( 'st-rank' ); //ランキング
+		} ?>
+
+			<?php }else{ //一覧を表示しない ?>
+
+				<div class="post">
+					<?php if(trim($cat_data['st_cattitle']) !== ''){ ?>
+						<h1 class="entry-title"><?php echo esc_html($cat_data['st_cattitle']) ?></h1>
+					<?php }else{ ?>
+						<h1 class="entry-title">「<?php single_cat_title(); ?>」 一覧</h1>
+					<?php } ?>
+
+					<?php if ( is_active_sidebar( 21 ) ) { ?>
+						<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 21 ) ) : else : //カテゴリページ上一括ウィジェット ?>
+						<?php endif; ?>
+					<?php } ?>
+
+					<div id="nocopy" <?php st_text_copyck(); ?>>
+						<?php if ( $is_thumbnal_under && $has_thumbnail ): // サムネイル ?>
+							<?php get_template_part( 'st-category-eyecatch' ); ?>
+						<?php endif; ?>
+
+						<div class="entry-content">
+							<?php echo apply_filters('the_content',category_description()); //コンテンツを表示 ?>
+						</div>
+					</div>
+					<?php get_template_part( 'popular-thumbnail' ); //任意のエントリ ?>
+
+					<?php if(trim($cat_data['snscat']) !== '' && (category_description())){ //コンテンツがある場合 ?>
+						<?php if ( isset($GLOBALS['stplus']) && $GLOBALS['stplus'] === 'yes' ) {
+							get_template_part( 'st-rank' ); //ランキング
+						} ?>
+						<?php get_template_part( 'sns-cat' ); //ソーシャルボタン読み込み ?>
+					<?php } ?>
+
+				</div><!-- /post -->
+			<?php } ?>
+	</div>
+	<div class="col-start-9 col-end-12 pl-6 pr-16">
+		<?php get_sidebar(); ?>
+	</div>
+</div>
 
 		<?php if((trim($cat_data['snscat']) !== '') && (!category_description())){ //コンテンツがない場合 ?>
 			<?php if ( isset($GLOBALS['stplus']) && $GLOBALS['stplus'] === 'yes' ) {
@@ -159,7 +166,6 @@ $has_thumbnail     = st_has_term_thumbnail();
         </main>
     </div>
     <!-- /#contentInner -->
-    <?php get_sidebar(); ?>
 </div>
 <!--/#content -->
 <?php get_footer(); ?>
