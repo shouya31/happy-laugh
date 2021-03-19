@@ -12,11 +12,6 @@ if ( is_single() ) {
 ?>
 
 <?php if ( ! $hide_related_posts_on_single && ! $hide_related_postss ): ?>
-	<?php
-	// 関連記事一覧の見出し
-	$related_posts_title = trim( stripslashes( get_option( 'st-data63', '' ) ) );
-	$related_posts_title = ( $related_posts_title !== '' ) ? st_esc_html_i( $related_posts_title ) : '関連記事';
-	?>
 
 	<h4 class="point"><span class="point-in"><?php echo $related_posts_title; ?></span></h4>
 

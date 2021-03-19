@@ -37,7 +37,7 @@
   </div>
   <!-- ここからREADMORE -->
   <div class="lg:hidden w-full flex justify-center pt-16 pb-8">
-    <div class="w-5/12 flex justify-center border-2 border-gray-900">
+    <div class="rounded-full w-5/12 flex justify-center border-2 border-gray-900">
       <div class="text-sm font-extralight pt-2 pb-2">READ MORE</div>
     </div>
   </div>

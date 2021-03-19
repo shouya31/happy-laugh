@@ -82,13 +82,13 @@ Template Name: TOPページ
 
     <!-- ここから帯 -->
     <div class="h-480 w-screen bg-bottom bg-cover flex justify-center items-center" style="height: 480px;background-image: url('/wp-content/themes/affinger5/images/writer-intro.png');">
-      <div class="h-240 w-3/4 lg:w-1/2 bg-white bg-opacity-25 flex flex-col justify-around justify-center items-center p-4">
+      <div class="h-240 w-3/4 bg-white bg-opacity-25 flex flex-col justify-around justify-center items-center p-4" style="height: 360px;">
         <div class="h-24 w-11/12 lg:w-5/6 text-2xl text-center break-words">
           texttexttexttext<br>
           texttexttexttext<br>
           texttexttexttext
         </div>
-        <div class="h-10 w-3/4 lg:w-2/5 flex justify-center items-center bg-gray-900">
+        <div class="h-12 w-3/4 lg:w-2/5 flex justify-center items-center bg-gray-900 rounded-full">
           <div class="text-white text-center">
             ライター一覧
           </div>

@@ -47,7 +47,7 @@
     wp_reset_postdata();
   ?>
   <div class="hidden lg:block w-full lg:w-11/12 lg:flex justify-center items-center mt-8">
-    <div class="h-16 w-60 flex justify-center items-center border-2 border-gray-900">
+    <div class="rounded-full h-16 w-60 flex justify-center items-center border-2 border-gray-900">
       <a href="/new" class="text-1xl text-center font-verdana">
         READ MORE
       </a>
