@@ -59,10 +59,22 @@
       <!-- メニュー -->
       <div class="hidden lg:flex justify-center pt-4 pb-4">
         <div class="w-7/12 flex justify-around text-xs">
-					<a href="/category/コスメ">コスメ</a>
-          <a href="/category/占い・恋愛">占い・恋愛</a>
-          <a href="/category/コスメ">ファッション</a>
-          <a href="/category/コスメ">ライフスタイル</a>
+				<a href="/category/コスメ" class="flex items-center">
+            <div class="h-6 w-6 bg-cosme bg-cover mr-4"></div>
+            <div>コスメ</div>
+          </a>
+          <a href="/category/占い・恋愛" class="flex items-center">
+            <div class="h-6 w-6 bg-love bg-cover mr-4"></div>
+            <div>占い・恋愛</div>
+          </a>
+          <a href="/category/コスメ" class="flex items-center">
+            <div class="h-6 w-6 bg-fashion bg-cover mr-4"></div>
+            <div>ファッション</div>
+          </a>
+          <a href="/category/コスメ" class="flex items-center">
+            <div class="h-6 w-6 bg-lifestyle bg-cover mr-4"></div>
+            <div>ライフスタイル</div>
+          </a>
         </div>
       </div>
       <!-- /メニュー -->
