@@ -62,3 +62,19 @@
   font-size: 8px;
   margin: 0px 0px 7px 0px;
 }
+
+.bg-cosme {
+  background-image: url('../images/cosme.png');
+}
+
+.bg-love {
+  background-image: url('../images/love.png');
+}
+
+.bg-fashion {
+  background-image: url('../images/fashion.png');
+}
+
+.bg-lifestyle {
+  background-image: url('../images/lifestyle.png');
+}
