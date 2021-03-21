@@ -2319,16 +2319,15 @@ header .descr {
 }
 
 .catname {
-	font-size: 13px;
+	font-size: 8px;
 	line-height: 1em;
-	color: #1a1a1a;
+	color: gray;
 	display: inline-block;
 	white-space: nowrap;
-	padding: 8px 8px;
-	margin-top: 5px;
-	border-radius: 2px;
+	padding: 8px;
 	text-decoration: none;
-	background:#f3f3f3;
+	border-radius: 999px;
+	border: 1px solid gray;
 }
 
 .post .st-catgroup a {

@@ -8,7 +8,7 @@
     <?php
     $i = 0;
       setPostViews(get_the_ID());
-      query_posts('meta_key=post_views_count&orderby=meta_value_num&posts_per_page=10&order=DESC');
+      query_posts('meta_key=post_views_count&orderby=meta_value_num&posts_per_page=5&order=DESC');
       while(have_posts()) : the_post();
       $i++;
     ?>
@@ -22,7 +22,14 @@
     </div>
     <div class="h-full w-2/3 text-sm break-words pl-8 font-verdana">
       <div class="flex mb-1">
-        <div class="ranking-category text-xs border border-black rounded-full p-1">コスメ</div>
+        <?php if (!is_category() && has_category()): ?>
+          <div class="ranking-category text-xs border border-black rounded-full p-1">
+            <?php
+              $postcat = get_the_category();
+              echo $postcat[0]->name;
+            ?>
+          </div>
+        <?php endif; ?>
       </div>
       <?php
         if(mb_strlen($post->post_title)>30):

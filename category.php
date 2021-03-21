@@ -1,114 +1,146 @@
 <?php get_header(); ?>
-
-<?php
-$the_cat_id        = get_queried_object_id();
-$is_thumbnal_under = (bool) st_get_term_meta( $the_cat_id, 'thumbnail_under' );
-$has_thumbnail     = st_has_term_thumbnail();
-?>
-<div id="content" class="clearfix">
-  <div id="contentInner">
-		<main>
-      <article>
-				<!--ぱんくず -->
-				<div id="breadcrumb">
-					<ol itemscope itemtype="http://schema.org/BreadcrumbList">
-						<li
-							itemprop="itemListElement"
-							itemscope
-							itemtype="http://schema.org/ListItem"
-						>
-							<a href="<?php echo home_url(); ?>" itemprop="item">
-								<span itemprop="name">
-									<?php echo esc_html( $GLOBALS["stdata141"] ); ?>
-								</span>
-							</a>
-							>
-							<meta itemprop="position" content="1" />
-						</li>
-
-						<?php
-							$catid = $the_cat_id;
-							if( !$catid ){
-							$cat_now = get_the_category();
-							$cat_now = $cat_now[0];
-							$catid  = $cat_now->cat_ID;
-							}
-						?>
-							<?php $allcats = array( $catid ); ?>
-							<?php
-							while ( !$catid == 0 ) {
-								$mycat = get_category( $catid );
-								$catid = $mycat->parent;
-								array_push( $allcats, $catid );
-							}
-							array_pop( $allcats );
-							$allcats = array_reverse( $allcats );
-							?>
-
-							<?php
-							$i = 2;
-							foreach ( $allcats as $catid ): ?>
-									<li itemprop="itemListElement" itemscope
-					itemtype="http://schema.org/ListItem"><a href="<?php echo esc_url( get_category_link( $catid ) ); ?>" itemprop="item">
-										<span itemprop="name"><?php echo esc_html( get_cat_name( $catid ) ); ?></span> </a> &gt;
-										<meta itemprop="position" content="<?php echo $i; ?>" />
-									</li>
-							<?php  $i++; ?>
-							<?php endforeach; ?>
-					</ol>
-				</div>
-				<!--/ ぱんくず -->
-
+  <?php
+  global $post;
+  $categories = get_the_category( $post->ID );
+    $now_category = get_query_var('cat');
+    // array_pop($categories);
+    $separator  = ' ';
+    $output     = '';
+  ?>
+    <!-- メインコンテンツ -->
+    <div class="sm:grid sm:grid-cols-12 px-4 sm:p-0 sm:mb-32">
+      <!-- パンくず-->
+      <div class="hidden sm:block col-start-2 col-end-9 pt-2 sm:pt-8">
+        <div class="text-xs text-gray-300 pl-4 mb-4 sm:mb-16">Home > ファッション</div>
+      </div>
+      <!-- /パンくず-->
+      <!-- PC版カテゴリ説明 -->
+      <div class="hidden sm:block col-start-3 col-end-11 px-16">
+        <div class="text-3xl lg:text-4xl font-black tracking-widest center mb-10"><?php single_cat_title(); ?>　記事一覧</div>
         <?php
-					$now_category = get_query_var('cat');
-					$args = array(
-											'include' => array($now_category),
-					);
-					$tag_all = get_terms("category", $args);
-					$cat_data = get_option('cat_'.$now_category);
+          $child_ids = get_term_children($now_category, 'category');
+          if (count($child_ids) > 1): ?>
+          <div class="divide-y-4 divide-black border-2 border-black py-8 px-16 mb-24">
+            <div class="mb-8"><?php echo category_description(); ?></div>
+            <div class="flex pt-8">
 
-					if(trim($cat_data['listdelete']) === ''){ 	//一覧を表示する場合　?>
+                <?php
+                foreach ( $child_ids as $category_id ): ?>
+                  <a href="<?php echo get_category_link( $category_id ); ?>" class="text-xs border border-black rounded-full mr-2" style="padding: 4px 10px;"><?php echo get_the_category_by_ID( $category_id ) ?></a>
+                <?php endforeach ?>
+            </div>
+          </div>
+        <?php endif; ?>
+      </div>
+      <!-- /PC版カテゴリ説明 -->
 
-						<div class="grid grid-cols-11">
-							<div class="col-start-2 col-end-8 pl-14">
-								<div class="post">
-									<?php if(trim($cat_data['st_cattitle']) !== ''){ ?>
-										<div class="text-4xl border-b-4 border-black entry-title"><?php echo esc_html($cat_data['st_cattitle']) ?></div>
-									<?php }else{ ?>
-										<div class="w-11/12 text-4xl border-b-4 border-black pl-2 pb-4"><?php single_cat_title(); ?></div>
-									<?php } ?>
+      <!-- SP版カテゴリ説明 -->
+      <div class="sm:hidden border border-black">
+        <div class="relative px-6">
+          <div class="divide-y divide-black">
+            <div class="border-b border-black pt-16 pb-4">「男性・女性服」、「スニーカー」、「ファッション小物」といった、ファッションに関わるものを紹介します。</div>
+            <div class="flex pt-4 pb-16">
+              <div class="text-xs border border-black rounded-full p-1 mr-2">カテゴリー</div>
+              <div class="text-xs border border-black rounded-full p-1 mr-2">カテゴリー</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /SP版カテゴリ説明 -->
 
-									<?php if ( is_active_sidebar( 21 ) ) { ?>
-										<?php if ( function_exists( 'dynamic_sidebar' ) && dynamic_sidebar( 21 ) ) : else : //カテゴリページ上一括ウィジェット ?>
-										<?php endif; ?>
-									<?php } ?>
+      <!-- カテゴリ記事 -->
 
-									<?php if(!is_paged()){ ?>
-										<div id="nocopy" <?php st_text_copyck(); ?>>
-										<?php if ( $is_thumbnal_under && $has_thumbnail ): // サムネイル ?>
-											<?php get_template_part( 'st-category-eyecatch' ); ?>
-										<?php endif; ?>
+      <div class="hidden sm:block col-start-2 col-end-8">
+        <div class="text-4xl border-b-4 border-black pl-2 pb-4 mb-12 font-bold"><?php single_cat_title(); ?></div>
 
-											<div class="entry-content">
-												<?php echo apply_filters('the_content',category_description()); //コンテンツを表示 ?>
-											</div>
-										</div>
-										<?php get_template_part( 'popular-thumbnail' ); //任意のエントリ ?>
-									<?php } ?>
-								</div><!-- /post -->
-								<?php get_template_part( 'itiran' ); //投稿一覧読み込み ?>
-								<?php get_template_part( 'st-pagenavi' ); //ページナビ読み込み ?>
+					<?php
+						$postslist = get_posts( "category=$now_category&numberposts=$numberposts&order=DESC&orderby=date" );
+						foreach ( $postslist as $post ) {
 
-							<?php } ?>
-						</div>
-						<div class="col-start-9 col-end-12 pl-6 pr-16">
-							<?php get_sidebar(); ?>
-						</div>
-					</div>
-      </article>
-		</main>
-  </div>
-  <!-- /#contentInner -->
-</div>
-<!--/#content -->
+            // サムネイルのURL取得ロジック
+            $thumbnail_id = get_post_thumbnail_id();
+            $eye_img = wp_get_attachment_image_src( $thumbnail_id , 'medium' );
+            $category = get_the_category();
+					?>
+
+						<a href="<?php echo get_permalink( $post->ID ); ?>" class="w-full flex mb-10">
+							<div class="h-56 w-1/3  bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>');">
+                <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2"><?php echo $category[0]->cat_name ?></div>
+							</div>
+							<div class="h-56 w-2/3 py-1 pl-8">
+								<div class="flex justify-between mb-4">
+									<div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
+									<div class="flex">
+										<div class="h-4 w-4 bg-baby bg-cover bg-center"><?php echo get_avatar( $author ); ?></div>
+										<div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
+									</div>
+								</div>
+								<div class="text-2xl mb-3"><?php echo $post->post_title; ?></div>
+								<div class="h-16 text-sm text-gray-400"><?php the_excerpt(); ?></div>
+							</div>
+						</a>
+					<?php } ?>
+				</div>
+      <!-- /カテゴリ記事 -->
+
+      <!-- ランキング -->
+      <div class="sm:hidden mt-16">
+        <div class="text-xl font-bold border-b-4 border-black p-2 mb-4">RANKING</div>
+        <input type="radio" name="writer-switch" checked="checked" class="hidden" id="writer-toggle-1" />
+        <div class="px-2" id="writer-articles-1">
+          <a href="/" class="h-24 w-full flex mb-6">
+            <div class="h-full w-1/3 bg-flower bg-cover bg-center"></div>
+            <div class="h-full w-2/3 text-sm break-words py-1 pl-8">
+              テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </div>
+          </a>
+				</div>
+      </div>
+      <!-- /ライター -->
+
+      <!-- カテゴリ一覧 -->
+      <div class="sm:hidden">
+        <div class="text-xl font-bold border-b-4 border-black mb-8 p-2">
+          CATEGORY
+        </div>
+        <div class="flex flex-col mb-4">
+          <a href="/category/コスメ" class="text-sm text-gray-500 font-semibold mb-2">コスメ</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">イエベ</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">ブルベ</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">ポーチの中身</a>
+        </div>
+        <div class="flex flex-col mb-4">
+          <a href="/category/占い・恋愛" class="text-sm text-gray-500 font-semibold mb-2">占い・恋愛</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">占い</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">恋愛</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">心理テスト</a>
+        </div>
+        <div class="flex flex-col mb-4">
+          <a href="/category/ファッション" class="text-sm text-gray-500 font-semibold mb-2">ファッション</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">韓国アパレル</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">20代向け</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">30~40代向け</a>
+        </div>
+        <div class="flex flex-col mb-4">
+          <a href="/category/ライフスタイル" class="text-sm text-gray-500 font-semibold mb-2">ライフスタイル</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">瞑想、ヨガ</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">格安SIM</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">ダイエット</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">保険</a>
+        </div>
+        <div class="flex flex-col mb-4">
+          <a href="/category/ライター一覧" class="text-sm text-gray-500 font-semibold mb-2">アカウント一覧</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">節約チャンネル</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">スタディオンデマンド</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">ライフスタイルチャンネル</a>
+          <a href="/" class="text-sm text-gray-400 mb-2 pl-4">ダイエットチャンネル</a>
+        </div>
+      </div>
+      <!-- /カテゴリ一覧 -->
+
+      <!-- サイドバー -->
+				<?php get_sidebar( 'type2' )  ?>
+      <!-- /サイドバー -->
+    </div>
+    <!-- /メインコンテンツ -->
 <?php get_footer(); ?>

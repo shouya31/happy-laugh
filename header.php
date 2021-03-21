@@ -67,13 +67,17 @@
             <div class="h-6 w-6 bg-love bg-cover mr-4"></div>
             <div>占い・恋愛</div>
           </a>
-          <a href="/category/コスメ" class="flex items-center">
+          <a href="/category/ファッション" class="flex items-center">
             <div class="h-6 w-6 bg-fashion bg-cover mr-4"></div>
             <div>ファッション</div>
           </a>
-          <a href="/category/コスメ" class="flex items-center">
+          <a href="/category/ライフスタイル" class="flex items-center">
             <div class="h-6 w-6 bg-lifestyle bg-cover mr-4"></div>
             <div>ライフスタイル</div>
+          </a>
+          <a href="/category/アカウント一覧" class="flex items-center">
+            <div class="h-6 w-6 bg-youtube bg-cover mr-4"></div>
+            <div>アカウント一覧</div>
           </a>
         </div>
       </div>
