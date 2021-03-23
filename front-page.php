@@ -29,10 +29,10 @@ Template Name: TOPページ
     <!-- PCメインコンテンツここまで -->
 
     <!-- ここからmobileメインコンテンツ -->
-    <div class="lg:hidden w-screen mb-24">
+    <div class="lg:hidden w-screen mb-12 px-4">
       <!-- ここからスイッチ -->
       <div class="h-14 w-full flex border-t border-gray-300">
-        <div class="w-1/2 flex justify-center items-center border-b border-gray-900">
+        <div class="w-1/2 flex justify-center items-center border-b border-gray-300">
           <label class="w-full font-bold text-xl text-center tracking-widest py-2" for="new-toggle">NEW</label>
         </div>
         <div class="w-1/2 flex justify-center items-center border-l border-b border-gray-300">
@@ -44,10 +44,11 @@ Template Name: TOPページ
       <!-- ここから投稿 -->
       <input type="radio" class="hidden" name="new-recommend-switch" id="new-toggle" checked="checked" />
       <div id="new">
-        <div class="grid grid-cols-2">
-          <?php get_template_part( 'template-parts/mobile-new-article' ); //NEW投稿一覧読み込み ?>
-      <input type="radio" class="hidden" name="new-recommend-switch" id="recommend-toggle" />
-      <div class="grid grid-cols-2" id="recommend">
+        <?php get_template_part( 'template-parts/mobile-new-article' ); //NEW投稿一覧読み込み ?>
+        <input type="radio" class="hidden" name="new-recommend-switch" id="recommend-toggle" />
+      </div>
+
+      <div id="recommend">
         <?php get_template_part( 'template-parts/mobile-recommend-article' ); //RECOMMEND投稿一覧読み込み ?>
       </div>
       <!-- 投稿ここまで -->
@@ -56,7 +57,9 @@ Template Name: TOPページ
 
     <div class="lg:hidden">
       <!-- SP_RANKING -->
-      <?php get_template_part( 'template-parts/mobile-ranking-article' ); //RANKING読み込み ?>
+      <div id="ranking">
+        <?php get_template_part( 'template-parts/mobile-ranking-article' ); //RANKING読み込み ?>
+      </div>
       <!-- /SP_RANKING -->
 
       <!-- SP_CATEGORY -->

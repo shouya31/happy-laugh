@@ -101,15 +101,37 @@
             $category = get_the_category();
 					?>
 
-        <div class="px-2">
-          <a href="<?php echo get_permalink( $post->ID ); ?>" class="h-24 w-full flex mb-6">
-            <div class="h-full w-1/3 bg-flower bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>');">
-            </div>
-            <div class="h-full w-2/3 text-sm break-words py-1 pl-8">
-              <?php echo $post->post_title; ?>
+          <a href="<?php the_permalink(); ?>" class="effect_bg mb-6 mt-6">
+            <div class="effect_bg h-32 w-full flex mb-6 mt-6">
+              <div class="h-full w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
+                <div class="w-1/3 bg-black flex justify-center"></div>
+              </div>
+              <div class="h-full w-2/3 text-sm break-words font-verdana p-3">
+                <div class="w-full flex justify-between">
+                  <div class="text-xs mb-3 text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
+                  <div class="flex">
+                    <div class="h-4 w-4 bg-cover bg-no-repeat bg-center"><?php echo get_avatar( $author->ID ); ?></div>
+                    <div class="text-xs text-gray-300 ml-2"><?php echo $author->display_name; ?></div>
+                  </div>
+                </div>
+                <?php
+                  if(mb_strlen($post->post_title)>30):
+                    $title= mb_substr($post->post_title,0,30) ; echo $title. ･･･ ;
+                  else:
+                    echo $post->post_title;
+                  endif;
+                ?>
+                <div class="flex mb-2 mt-2">
+                  <div class="ranking-category text-xs border border-black rounded-full p-1">
+                    <?php
+                      $postcat = get_the_category();
+                      echo $postcat[0]->name;
+                    ?>
+                  </div>
+                </div>
+              </div>
             </div>
           </a>
-        </div>
         <?php } ?>
       </div>
 

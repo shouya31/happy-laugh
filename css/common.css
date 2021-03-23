@@ -23,6 +23,7 @@ h2{
 }
 
 .swiper-slide {
+  box-shadow: 16px 4px 64px rgb(141 177 217 / 30%), -16px -16px 40px rgb(255 255 255 / 80%), inset -8px -6px 80px rgb(255 255 255 / 18%);
   height: auto;
   overflow: visible;
   font-size: 18px;
@@ -31,6 +32,7 @@ h2{
   align-items: flex-end;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius:24px;
 }
 
 .bottom0-position{
@@ -98,4 +100,7 @@ h2{
 
 .category-sp-description p {
   font-size: 12px;
+}
+.effect_bg{
+  box-shadow: 16px 4px 64px rgb(141 177 217 / 30%), -16px -16px 40px rgb(255 255 255 / 80%), inset -8px -6px 80px rgb(255 255 255 / 18%);
 }

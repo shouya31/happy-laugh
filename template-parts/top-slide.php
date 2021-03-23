@@ -19,7 +19,7 @@
           class="swiper-slide w-3/5 bg-cover bg-no-repeat bg-center flex items-end"
           style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);"
         >
-          <div class="w-full bg-black bg-opacity-75 p-6" >
+          <div class="w-full bg-black bg-opacity-75 p-6" style="border-radius: 0px 0px 24px 24px;" >
             <div class="text-white mb-4"><?php the_title(); ?></div>
             <div class="flex">
               <div class="text-sm text-white border-2 border-white rounded-full p-2">
