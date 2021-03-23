@@ -9,8 +9,6 @@ Template Name: TOPページ
     <!-- ここからPICKUP -->
     <div class="hidden lg:block h-560 w-full lg:flex justify-center items-center lg:mt-16 mb-48">
       <?php get_template_part( 'template-parts/top-slide' ); //FVのスライダー読み込み ?>
-
-
     </div>
     <!-- PICKUPここまで -->
 
@@ -43,6 +41,7 @@ Template Name: TOPページ
 
       <!-- ここから投稿 -->
       <input type="radio" class="hidden" name="new-recommend-switch" id="new-toggle" checked="checked" />
+
       <div id="new">
         <?php get_template_part( 'template-parts/mobile-new-article' ); //NEW投稿一覧読み込み ?>
         <input type="radio" class="hidden" name="new-recommend-switch" id="recommend-toggle" />
@@ -57,9 +56,8 @@ Template Name: TOPページ
 
     <div class="lg:hidden">
       <!-- SP_RANKING -->
-      <div id="ranking">
-        <?php get_template_part( 'template-parts/mobile-ranking-article' ); //RANKING読み込み ?>
-      </div>
+
+      <?php get_template_part( 'template-parts/mobile-ranking-article' ); //RANKING読み込み ?>
       <!-- /SP_RANKING -->
 
       <!-- SP_CATEGORY -->
