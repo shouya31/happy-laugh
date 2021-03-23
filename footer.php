@@ -20,25 +20,25 @@
   <!-- /PC版 -->
 
   <!-- SP版 -->
-  <div class="grid grid-cols-2 pt-8 pb-4 lg:hidden">
+  <div class="grid grid-cols-2 pt-8 pb-12 lg:hidden">
     <div class="pl-8">
-      <div class="mb-4">Pages</div>
-      <a class="text-xs text-gray-400 mb-3">ABOUT</a>
-      <a href="/writers" class="text-xs text-gray-400 mb-3">Writer</a>
-      <a class="text-xs text-gray-400 mb-3">運営会社</a>
-      <a class="text-xs text-gray-400">プライバシーポリシー</a>
+      <div class="mb-4"><a href=""></a>Pages</div>
+      <div class="text-xs mb-3"><a class="text-gray-400" href="">ABOUT</a></div>
+      <div class="text-xs mb-3"><a class="text-gray-400" href="/writers">Writer</a></div>
+      <div class="text-xs mb-3"><a class="text-gray-400" href="">運営会社</a></div>
+      <div class="text-xs"><a class="text-gray-400" href="">プライバシーポリシー</a></div>
     </div>
     <div class="pl-8">
       <div class="mb-4">Categories</div>
-      <div href="/category/コスメ" class="text-xs text-gray-400 mb-3">コスメ</div>
-      <div href="/category/占い・恋愛" class="text-xs text-gray-400 mb-3">占い・恋愛</div>
-      <div href="/category/ファッション" class="text-xs text-gray-400 mb-3">ファッション</div>
-      <div href="/category/ライフスタイル" class="text-xs text-gray-400 mb-3">ライフスタイル</div>
-      <div href="/category/アカウント一覧" class="text-xs text-gray-400 mb-3">アカウント一覧</div>
+      <div class="text-xs mb-3"><a class="text-gray-400" href="/category/コスメ">コスメ</a></div>
+      <div class="text-xs mb-3"><a class="text-gray-400" href="/category/占い・恋愛">占い・恋愛</a></div>
+      <div class="text-xs mb-3"><a class="text-gray-400" href="/category/ファッション">ファッション</a></div>
+      <div class="text-xs mb-3"><a class="text-gray-400" href="/category/ライフスタイル">ライフスタイル</a></div>
+      <div class="text-xs mb-3"><a class="text-gray-400" href="/category/アカウント一覧">アカウント一覧</a></div>
     </div>
-    <?php get_template_part( 'st-smartfooter-menu' ); //スマホ用フッターメニュー ?>
 
   </div>
+  <?php get_template_part( 'st-smartfooter-menu' ); //スマホ用フッターメニュー ?>
 
   <!-- /SP版 -->
   <div class="text-white text-center bg-black">© 2021 ハピラフ</div>
