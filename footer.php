@@ -1,5 +1,5 @@
 <footer>
-  <div class="flex flex-col items-center border-double border-b-4 lg:border-none py-4 lg:py-16">
+  <div class="flex flex-col items-center border-double border-t-4 lg:border-none pt-4 lg:py-16">
     <div class="text-md lg:text-xl font-bold tracking-widest">ハピラフ</div>
     <div class="text-2xl lg:text-4xl font-black tracking-widest">MAGAZINE</div>
   </div>
@@ -20,15 +20,15 @@
   <!-- /PC版 -->
 
   <!-- SP版 -->
-  <div class="grid grid-cols-2 pt-8 pb-12 lg:hidden">
-    <div class="pl-8">
+  <div class="grid grid-cols-2 pt-4 pb-12 lg:hidden">
+    <div class="pl-10">
       <div class="mb-4"><a href=""></a>Pages</div>
       <div class="text-xs mb-3"><a class="text-gray-400" href="">ABOUT</a></div>
       <div class="text-xs mb-3"><a class="text-gray-400" href="/writers">Writer</a></div>
       <div class="text-xs mb-3"><a class="text-gray-400" href="">運営会社</a></div>
       <div class="text-xs"><a class="text-gray-400" href="">プライバシーポリシー</a></div>
     </div>
-    <div class="pl-8">
+    <div class="pl-10">
       <div class="mb-4">Categories</div>
       <div class="text-xs mb-3"><a class="text-gray-400" href="/category/コスメ">コスメ</a></div>
       <div class="text-xs mb-3"><a class="text-gray-400" href="/category/占い・恋愛">占い・恋愛</a></div>

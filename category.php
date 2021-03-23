@@ -34,14 +34,15 @@
       <!-- /PC版カテゴリ説明 -->
 
       <!-- SP版カテゴリ説明 -->
-      <div class="sm:hidden border border-black">
+      <div class="sm:hidden border border-black" style="width: 90%; margin: 50px auto;">
+      <div class="text-2xl lg:text-4xl font-black tracking-widest center m-5"><?php single_cat_title(); ?>　記事一覧</div>
         <div class="relative px-6">
           <div class="divide-y divide-black">
-            <div class="border-b border-black pt-16 pb-4"><?php echo category_description(); ?></div>
-            <div class="flex pt-4 pb-16">
+            <div class="category-sp-description border-b border-black text-xl pt-4 pb-4"><?php echo category_description(); ?></div>
+            <div class="flex pt-4 pb-4">
               <?php
                 foreach ( $child_ids as $category_id ): ?>
-                  <a href="<?php echo get_category_link( $category_id ); ?>" class="text-xs border border-black rounded-full mr-2" style="padding: 4px 10px;"><?php echo get_the_category_by_ID( $category_id ) ?></a>
+                  <a href="<?php echo get_category_link( $category_id ); ?>" class="text-xs border border-black rounded-full mr-2" style="padding: 4px 10px; font-size:8px;"><?php echo get_the_category_by_ID( $category_id ) ?></a>
                 <?php endforeach ?>
             </div>
           </div>
