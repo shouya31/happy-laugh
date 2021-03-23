@@ -13,7 +13,7 @@
   </div>
   <div class="hidden lg:flex justify-center mb-16">
     <a class="px-4">ABOUT</a>
-    <a class="px-4">WRITER</a>
+    <a href="/writers" class="px-4">WRITER</a>
     <a class="px-4">運営会社</a>
     <a class="px-4">プライバシーポリシー</a>
   </div>
@@ -23,10 +23,10 @@
   <div class="grid grid-cols-2 pt-8 pb-4 lg:hidden">
     <div class="pl-8">
       <div class="mb-4">Pages</div>
-      <div class="text-xs text-gray-400 mb-3">ABOUT</div>
-      <div class="text-xs text-gray-400 mb-3">Writer</div>
-      <div class="text-xs text-gray-400 mb-3">運営会社</div>
-      <div class="text-xs text-gray-400">プライバシーポリシー</div>
+      <a class="text-xs text-gray-400 mb-3">ABOUT</a>
+      <a href="/writers" class="text-xs text-gray-400 mb-3">Writer</a>
+      <a class="text-xs text-gray-400 mb-3">運営会社</a>
+      <a class="text-xs text-gray-400">プライバシーポリシー</a>
     </div>
     <div class="pl-8">
       <div class="mb-4">Categories</div>
@@ -36,7 +36,10 @@
       <div href="/category/ライフスタイル" class="text-xs text-gray-400 mb-3">ライフスタイル</div>
       <div href="/category/アカウント一覧" class="text-xs text-gray-400 mb-3">アカウント一覧</div>
     </div>
+    <?php get_template_part( 'st-smartfooter-menu' ); //スマホ用フッターメニュー ?>
+
   </div>
+
   <!-- /SP版 -->
   <div class="text-white text-center bg-black">© 2021 ハピラフ</div>
 </footer>

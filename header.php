@@ -50,16 +50,16 @@
     <!-- ヘッダー -->
     <header class="shadow-lg">
       <!-- ロゴ -->
-      <a href="/" class="flex flex-col items-center py-4">
-        <div class="text-lg lg:text-xl font-bold tracking-widest">ハピラフ</div>
-        <div class="text-3xl lg:text-4xl font-black tracking-widest">MAGAZINE</div>
+      <a href="/" class="flex flex-col items-center py-1">
+        <div class="text-1xl lg:text-xl font-bold tracking-widest">ハピラフ</div>
+        <div class="text-2xl lg:text-4xl font-black tracking-widest">MAGAZINE</div>
       </a>
       <!-- /ロゴ -->
 
       <!-- メニュー -->
       <div class="hidden lg:flex justify-center pt-4 pb-4">
         <div class="w-7/12 flex justify-around text-xs">
-				<a href="/category/コスメ" class="flex items-center">
+          <a href="/category/コスメ" class="flex items-center">
             <div class="h-6 w-6 bg-cosme bg-cover mr-4"></div>
             <div>コスメ</div>
           </a>

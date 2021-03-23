@@ -8263,15 +8263,16 @@ header p#st-mobile-logo {
 ---------------------------------*/
 
 #st-footermenubox {
+
 	position: fixed;
 	bottom: 0px;
 	left: 0;
 	transition: all .3s;
 	width:100%;
-  	height:auto;
-  	box-sizing:border-box;
-  	padding: 7px 10px;
-  	background:#fff;
+	height:60px;
+	box-sizing:border-box;
+	padding: 17px 10px 0px 0px;
+	background:#fff;
 	box-shadow:0px 0px 5px;
 	z-index:99999;
 }
@@ -8838,7 +8839,7 @@ footer .footermenust li:last-child {
 }
 
 footer ul, footer ol{
-	padding-left:30px;
+	/* padding-left:30px; */
 }
 
 #footer p.copyr {
