@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <?php
   global $post;
-  $categories = get_the_category( $post->ID );
+    $categories = get_the_category( $post->ID );
     $now_category = get_query_var('cat');
     // array_pop($categories);
     $separator  = ' ';

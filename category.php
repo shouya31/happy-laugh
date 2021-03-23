@@ -1,7 +1,7 @@
 <?php get_header(); ?>
   <?php
   global $post;
-  $categories = get_the_category( $post->ID );
+    $categories = get_the_category( $post->ID );
     $now_category = get_query_var('cat');
     // array_pop($categories);
     $separator  = ' ';
@@ -62,6 +62,7 @@
             $thumbnail_id = get_post_thumbnail_id();
             $eye_img = wp_get_attachment_image_src( $thumbnail_id , 'medium' );
             $category = get_the_category();
+            $author = get_userdata($post->post_author);
 					?>
 
 						<a href="<?php echo get_permalink( $post->ID ); ?>" class="w-full flex mb-10">
@@ -72,8 +73,10 @@
 								<div class="flex justify-between mb-4">
 									<div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
 									<div class="flex">
-										<div class="h-4 w-4 bg-baby bg-cover bg-center"><?php echo get_avatar( $author ); ?></div>
-										<div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
+										<div class="h-4 w-4 bg-baby bg-cover bg-center"><?php echo get_avatar( $author->ID ); ?></div>
+										<div class="text-xs text-gray-300 ml-2">
+                    <?php echo $author->display_name; ?>
+                    </div>
 									</div>
 								</div>
 								<div class="text-2xl mb-3"><?php echo $post->post_title; ?></div>

@@ -6,7 +6,7 @@
 <!--[if IE 8]>
 <html class="ie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html <?php language_attributes(); ?> <?php st_html_class(); ?>>
+<html <?php language_attributes(); ?> <?php st_html_class(); ?> style="margin-top: 0px !important;">
 	<!--<![endif]-->
 	<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
   <?php if ( is_front_page() && !is_paged() ): ?>
@@ -50,7 +50,7 @@
     <!-- ヘッダー -->
     <header class="shadow-lg">
       <!-- ロゴ -->
-      <a href="/" class="flex flex-col items-center py-4 lg:p-0">
+      <a href="/" class="flex flex-col items-center py-4">
         <div class="text-lg lg:text-xl font-bold tracking-widest">ハピラフ</div>
         <div class="text-3xl lg:text-4xl font-black tracking-widest">MAGAZINE</div>
       </a>

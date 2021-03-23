@@ -12,7 +12,7 @@
   $i++
 ?>
 
-  <div class="w-full flex flex-col items-center px-4 pt-6">
+  <a href="<?php the_permalink(); ?>" class="w-full flex flex-col items-center px-4 pt-6">
     <div class="h-36 w-full bg-cover bg-center" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
       <div class="w-3/5 text-xs text-red-300 text-center py-2 bg-white">
         <?php if (!is_category() && has_category()): ?>
@@ -31,5 +31,5 @@
         <div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
       </div>
     </div>
-  </div>
+  </a>
   <?php endforeach; endif; wp_reset_postdata(); ?>

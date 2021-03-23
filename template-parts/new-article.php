@@ -5,7 +5,7 @@
 
 <?php if ( have_posts() ) : ?>
   <?php
-    $args = array( "posts_per_page" => 7, );
+    $args = array( "posts_per_page" => 12, );
     $postslist = get_posts( $args );
     foreach ( $postslist as $post ) :
       setup_postdata( $post ); ?>
