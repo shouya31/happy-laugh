@@ -1,5 +1,5 @@
 <footer>
-  <div class="flex flex-col items-center border-double border-t-4 lg:border-none pt-4 lg:py-16">
+  <div class="flex flex-col items-center border-double border-t-4 pt-4 lg:py-8">
     <div class="text-md lg:text-xl font-bold tracking-widest">ハピラフ</div>
     <div class="text-2xl lg:text-4xl font-black tracking-widest">MAGAZINE</div>
   </div>
