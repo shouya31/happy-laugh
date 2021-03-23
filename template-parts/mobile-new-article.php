@@ -15,7 +15,7 @@
   ?>
     <div class="w-full flex flex-col items-center px-4 pt-6">
       <div class="h-36 w-full bg-cover bg-center" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
-        <div class="w-3/5 text-xs text-red-300 text-center py-2 bg-white">
+        <div class="w-3/5 text-xs text-center py-2 bg-white">
           <?php if (!is_category() && has_category()): ?>
             <?php
               $postcat = get_the_category();
@@ -38,7 +38,7 @@
   <!-- ここからREADMORE -->
   <div class="lg:hidden w-full flex justify-center pt-16 pb-8">
     <div class="rounded-full w-5/12 flex justify-center border-2 border-gray-900">
-      <div class="text-sm font-extralight pt-2 pb-2">READ MORE</div>
+      <a href="/new" class="text-sm font-extralight pt-2 pb-2">READ MORE</a>
     </div>
   </div>
   <!-- READMOREここまで -->

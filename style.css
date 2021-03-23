@@ -2514,15 +2514,12 @@ h1:not(.st-css-no2) {
 /* 中見出し */
 h2:not(.st-css-no2),
 .h2modoki{
-	background: #f3f3f3;
 	color: #1a1a1a;
 	margin: 20px 0;
 	padding-top: 10px;
 	padding-right: 20px;
 	padding-bottom: 10px;
 	padding-left: 20px;
-	border-top:1px solid #ccc;
-	border-bottom:1px solid #ccc;
 }
 
 /*小見出し*/

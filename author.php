@@ -1,84 +1,95 @@
 <?php get_header(); ?>
+  <?php
+  global $post;
+  $categories = get_the_category( $post->ID );
+    $now_category = get_query_var('cat');
+    // array_pop($categories);
+    $separator  = ' ';
+    $output     = '';
+		$userId = get_query_var('author');
+		$user = get_userdata($userId);
+  ?>
+    <!-- メインコンテンツ -->
+    <div class="sm:grid sm:grid-cols-12 px-4 sm:p-0 sm:mb-32">
+      <!-- パンくず-->
+      <div class="hidden sm:block col-start-2 col-end-9 pt-2 sm:pt-8">
+        <div class="text-xs text-gray-300 pl-4 mb-4 sm:mb-16"><?php breadcrumbs(); ?></div>
+      </div>
+      <!-- /パンくず-->
+      <!-- カテゴリ記事 -->
+      <div class="hidden sm:block col-start-2 col-end-8">
+        <div class="text-4xl border-b-4 border-black pl-2 pb-4 mb-12 font-bold"><?php echo $user->display_name; ?>さんの投稿</div>
 
-<div id="content" class="clearfix">
-	<div id="contentInner">
-		<main <?php st_text_copyck(); ?>>
-			<article>
-				<div id="author-page-<?php echo $author; ?>" class="post">
-					<!--ぱんくず -->
-						<div id="breadcrumb">
-						<ol>
-							<li><a href="<?php echo home_url(); ?>"><span><?php echo esc_html( $GLOBALS["stdata141"] ); ?></span></a> >  </li>
-							<li><?php the_author_meta('display_name', get_query_var('author')); ?></li>
-						</ol>
-						</div>
-					<!--/ ぱんくず -->
-					<!--ループ開始-->
-					
-					<?php 
-					$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
-					$author = $curauth->ID;
+					<?php
+						$postslist = get_posts( "author=$userId&category=$now_category&numberposts=$numberposts&order=DESC&orderby=date" );
+						foreach ( $postslist as $post ) {
+
+            // サムネイルのURL取得ロジック
+            $thumbnail_id = get_post_thumbnail_id();
+            $eye_img = wp_get_attachment_image_src( $thumbnail_id , 'medium' );
+            $category = get_the_category();
 					?>
 
-					<h1 class="entry-title"><?php echo esc_html( get_queried_object()->display_name ); ?></h1>
-
-						<div class="center st-authorpage-profile-avatar" style="padding-bottom:20px;">
-							<?php if ( $author === 1 && get_option( 'st_author_profile_avatar' ) ): ?>
-								<img src="<?php echo esc_url( get_option( 'st_author_profile_avatar' ) ); ?>">
-							<?php else: ?>
-								<?php echo get_avatar( $author, 150 ); ?>
-							<?php endif; ?>
-						</div>
-
-						<p class="st-author-description"><?php the_author_meta( 'description', $author ); ?></p>
-						<div class="st-author-box">
-							<div class="post st-author-profile">
-								<div class="sns">
-									<ul class="profile-sns clearfix">
-										<?php if(get_the_author_meta('twitter',1)): // Twitter ?>
-											<li class="twitter"><a rel="nofollow" href="<?php esc_url( the_author_meta('twitter',$author) ); ?>" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-										<?php endif; ?>
-
-										<?php if(get_the_author_meta('facebook',$author)): // Facebook ?>
-											<li class="facebook"><a rel="nofollow" href="<?php esc_url( the_author_meta('facebook',$author) ); ?>" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-										<?php endif; ?>
-
-										<?php if(get_the_author_meta('instagram',$author)): // instagram ?>
-											<li class="instagram"><a rel="nofollow" href="<?php esc_url( the_author_meta('instagram',$author) ); ?>" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-										<?php endif; ?>
-
-										<?php if(get_the_author_meta('youtube',$author)): // YouTube ?>
-											<li class="author-youtube"><a rel="nofollow" href="<?php esc_url( the_author_meta('youtube',$author) ); ?>" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-										<?php endif; ?>
-
-										<?php if(get_the_author_meta('amazon',$author)): // amazon ?>
-											<li class="author-amazon"><a rel="nofollow" href="<?php the_author_meta('amazon',$author); ?>" target="_blank"><i class="fa fa-amazon" aria-hidden="true"></i></a></li>
-										<?php endif; ?>
-
-										<?php if(get_the_author_meta('feed_url',$author)): // RSS ?>
-											<li class="author-feed"><a rel="nofollow" href="<?php the_author_meta('feed_url',$author); ?>" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i></a></li>
-										<?php endif; ?>
-
-										<?php if(get_the_author_meta('form_url',$author)): // フォーム ?>
-											<li class="author-form"><a rel="nofollow" href="<?php the_author_meta('form_url',$author); ?>" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a></li>
-										<?php endif; ?>
-
-										<?php if(get_the_author_meta('user_url',$author)): // HOME ?>
-											<li class="author-homepage"><a rel="nofollow" href="<?php the_author_meta('user_url',$author); ?>" target="_blank"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-										<?php endif; ?>
-									</ul>
-								</div>
+						<a href="<?php echo get_permalink( $post->ID ); ?>" class="w-full flex mb-10">
+							<div class="h-56 w-1/3  bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>');">
+                <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2"><?php echo $category[0]->cat_name ?></div>
 							</div>
-						</div>
+							<div class="h-56 w-2/3 py-1 pl-8">
+								<div class="flex justify-between mb-4">
+									<div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
+									<div class="flex">
+										<div class="h-4 w-4 bg-baby bg-cover bg-center"><?php echo get_avatar( $author ); ?></div>
+										<div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
+									</div>
+								</div>
+								<div class="text-2xl mb-3"><?php echo $post->post_title; ?></div>
+								<div class="h-16 text-sm text-gray-400"><?php the_excerpt(); ?></div>
+							</div>
+						</a>
+					<?php } ?>
 				</div>
-				<!--/post-->
-				<?php get_template_part( 'itiran' ); //投稿一覧読み込み ?>
-				<?php get_template_part( 'st-pagenavi' ); //ページナビ読み込み ?>
-			</article>
-		</main>
-	</div>
-	<!-- /#contentInner -->
-	<?php get_sidebar(); ?>
-</div>
-<!--/#content -->
+      <!-- /カテゴリ記事 -->
+
+
+      <div class="sm:hidden mb-8">
+        <div class="text-xl font-bold border-b-4 border-black p-2 mb-4"><?php echo $user->display_name; ?>の投稿</div>
+        <?php
+						$postslist = get_posts( "author=$userId&category=$now_category&numberposts=$numberposts&order=DESC&orderby=date" );
+						foreach ( $postslist as $post ) {
+
+            // サムネイルのURL取得ロジック
+            $thumbnail_id = get_post_thumbnail_id();
+            $eye_img = wp_get_attachment_image_src( $thumbnail_id , 'medium' );
+            $category = get_the_category();
+					?>
+
+        <div class="px-2">
+          <a href="<?php echo get_permalink( $post->ID ); ?>" class="h-24 w-full flex mb-6">
+            <div class="h-full w-1/3 bg-flower bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>');">
+            </div>
+            <div class="h-full w-2/3 text-sm break-words py-1 pl-8">
+              <?php echo $post->post_title; ?>
+            </div>
+          </a>
+        </div>
+        <?php } ?>
+      </div>
+
+      <!-- ランキング -->
+      <div class="sm:hidden mt-16">
+      <?php get_template_part( 'template-parts/mobile-ranking-article' ); //RANKING読み込み ?>
+      </div>
+      <!-- /ライター -->
+
+      <!-- カテゴリ一覧 -->
+      <div class="sm:hidden">
+        <?php get_template_part( 'template-parts/side-category' ); //CATEGORY一覧読み込み ?>
+      </div>
+      <!-- /カテゴリ一覧 -->
+
+      <!-- サイドバー -->
+				<?php get_sidebar( 'type2' )  ?>
+      <!-- /サイドバー -->
+    </div>
+    <!-- /メインコンテンツ -->
 <?php get_footer(); ?>

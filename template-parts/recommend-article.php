@@ -5,6 +5,8 @@
 
   <?php
     $i = 0;
+    $author = get_the_author_meta('id');
+    $author_img = get_avatar($author);
     $tag_posts = get_posts(array(
         'post_type' => 'post', // 投稿タイプ
         'tag'    => 'おすすめ', // タグをスラッグで指定する場合
@@ -32,7 +34,7 @@
         <div class="flex justify-between mb-1">
           <div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
           <div class="flex">
-            <div class="h-4 w-4"><?php echo get_avatar( $author ); ?></div>
+            <div class="h-4 w-4"><?php echo $author_img; ?></div>
             <div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
           </div>
         </div>

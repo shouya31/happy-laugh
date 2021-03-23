@@ -16,23 +16,7 @@ Template Name: TOPページ
 
     <!-- mobilePICKUPここから -->
     <div class="lg:hidden">
-      <div class="h-64 bg-cover bg-no-repeat bg-center bg-coffee">
-        <div class="w-1/4 bg-white flex justify-center">
-          <div class="text-xs text-yellow-800 pt-2 pb-2">
-            CAFE
-          </div>
-        </div>
-      </div>
-      <div class="p-4">
-        <div class="text-2xl mb-2">title</div>
-        <div class="text-xs text-gray-300 mb-2">2021.03.04</div>
-        <div class="flex">
-          <div class="h-6 w-6 bg-contain bg-no-repeat bg-baby"></div>
-          <div class="flex items-center">
-            <div class="text-xs text-gray-300 ml-2">user</div>
-          </div>
-        </div>
-      </div>
+      <?php get_template_part( 'template-parts/top-slide' ); //FVのスライダー読み込み ?>
     </div>
     <!-- mobilePICKUPここから -->
 
@@ -88,11 +72,11 @@ Template Name: TOPページ
           texttexttexttext<br>
           texttexttexttext
         </div>
-        <div class="h-12 w-3/4 lg:w-2/5 flex justify-center items-center bg-gray-900 rounded-full">
+        <a href="/writers" class="h-12 w-3/4 lg:w-2/5 flex justify-center items-center bg-gray-900 rounded-full">
           <div class="text-white text-center">
             ライター一覧
           </div>
-        </div>
+        </a>
       </div>
     </div>
     <!-- 帯ここまで -->

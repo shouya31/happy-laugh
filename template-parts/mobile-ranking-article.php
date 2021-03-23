@@ -21,7 +21,12 @@
         </div>
         <div class="h-full w-2/3 text-sm break-words pl-8 font-verdana">
           <div class="flex mb-1">
-            <div class="ranking-category text-xs border border-black rounded-full p-1">コスメ</div>
+            <div class="ranking-category text-xs border border-black rounded-full p-1">
+            <?php
+              $postcat = get_the_category();
+              echo $postcat[0]->name;
+            ?>
+            </div>
           </div>
           <?php
             if(mb_strlen($post->post_title)>30):

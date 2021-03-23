@@ -1,3 +1,12 @@
+h2{
+  padding-left: 2rem;
+  margin-bottom: 4rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  border-left-width: 4px;
+  --tw-border-opacity: 1;
+  border-color: rgba(0,0,0,var(--tw-border-opacity));
+}
 .font-verdana{
   font-family: Verdana !important;
 }
@@ -76,4 +85,12 @@
 
 .bg-youtube {
   background-image: url('../images/youtube.png');
+}
+
+#breadcrumbs ul {
+}
+
+#breadcrumbs ul li {
+	display: inline-block;
+	vertical-align: top;
 }

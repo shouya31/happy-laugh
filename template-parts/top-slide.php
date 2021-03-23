@@ -20,9 +20,14 @@
           style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);"
         >
           <div class="w-full bg-black bg-opacity-75 p-6" >
-            <div class="text-white mb-4">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</div>
+            <div class="text-white mb-4"><?php the_title(); ?></div>
             <div class="flex">
-              <div class="text-sm text-white border-2 border-white rounded-full p-2">カテゴリー</div>
+              <div class="text-sm text-white border-2 border-white rounded-full p-2">
+                <?php
+                  $postcat = get_the_category();
+                  echo $postcat[0]->name;
+                ?>
+              </div>
             </div>
           </div>
         </a>
