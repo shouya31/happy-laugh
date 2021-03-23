@@ -6891,3 +6891,12 @@ function get_youngest_tax( $taxes, $mytaxonomy ){
 	}
 	return $youngest;
 }
+
+function scrapeImage( $text ) {
+	$pattern = '/src=[\'"]?([^\'" >]+)[\'" >]/';
+	preg_match( $pattern, $text, $link );
+	$link = $link[1];
+	$link = urldecode( $link );
+
+	return $link;
+}
