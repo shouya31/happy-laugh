@@ -16,10 +16,10 @@
       ?>
         <a
           href="<?php the_permalink(); ?>"
-          class="swiper-slide bg-cover bg-center flex items-end"
+          class="swiper-slide bg-cover bg-center flex items-end sm:rounded-3xl"
           style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);"
         >
-          <div class="w-full bg-black bg-opacity-75 rounded-b-3xl p-6">
+          <div class="w-full bg-black bg-opacity-75 sm:rounded-b-3xl p-6">
             <div class="text-white mb-4"><?php the_title(); ?></div>
             <div class="flex">
               <div class="text-sm text-white border-2 border-white rounded-full p-2">
