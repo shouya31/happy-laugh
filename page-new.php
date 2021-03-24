@@ -107,20 +107,15 @@ $st_is_ex_af = st_is_ver_ex_af();
               }
             ?>
 
-          <a href="<?php the_permalink(); ?>" class="h-24 w-full flex mb-6">
-            <div class="h-full w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
-              <div class="w-3/5 text-center p-1 bg-white" style="font-size: 5px;">
-                <?php if (!is_category() && has_category()): ?>
-                  <?php
-                    $postcat = get_the_category();
-                    echo $postcat[0]->name;
-                  ?>
-                <?php endif; ?>
-              </div>
-            </div>
-            <div class="h-full w-2/3 text-sm break-words pl-8 font-verdana">
-              <div class="flex mb-1">
+          <a href="<?php the_permalink(); ?>" class="effect_bg h-28 w-full flex mb-6">
+            <div class="h-full w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);"></div>
+            <div class="h-full w-2/3 text-sm break-words p-3 font-verdana">
+              <div class="flex mb-1" style="justify-content: space-between;">
                 <div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
+                <div class="flex">
+                  <div class="h-4 w-4 bg-cover bg-no-repeat bg-center"><?php echo get_avatar( $author ); ?></div>
+                  <div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
+                </div>
               </div>
               <?php
                 if(mb_strlen($post->post_title)>30):
@@ -129,8 +124,15 @@ $st_is_ex_af = st_is_ver_ex_af();
                   echo $post->post_title;
                 endif;
               ?>
+              <div class="flex mb-2 mt-2">
+                <div class="ranking-category text-xs border border-black rounded-full p-1">
+                  <?php
+                    $postcat = get_the_category();
+                    echo $postcat[0]->name;
+                  ?>
+                </div>
+              </div>
             </div>
-
           </a>
           <?php
             endwhile;

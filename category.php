@@ -106,12 +106,12 @@
               <div class="h-full w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
                 <div class="w-1/3 bg-black flex justify-center"></div>
               </div>
-              <div class="h-full w-2/3 text-xm break-words font-verdana p-3">
+              <div class="h-full w-2/3 text-sm break-words font-verdana p-3">
                 <div class="w-full flex justify-between">
                   <div class="text-xs mb-3 text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
                   <div class="flex">
                     <div class="h-4 w-4 bg-cover bg-no-repeat bg-center"><?php echo get_avatar( $author->ID ); ?></div>
-                    <div class="text-xs text-gray-300 ml-2"><?php echo $author->display_name; ?></div>
+                    <div class="text-sm text-gray-300 ml-2"><?php echo $author->display_name; ?></div>
                   </div>
                 </div>
                 <?php
