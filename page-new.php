@@ -49,8 +49,8 @@ $st_is_ex_af = st_is_ver_ex_af();
           }
         ?>
 
-        <a href="<?php the_permalink(); ?>" class="w-full flex mb-12">
-          <div class="h-56 w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
+        <a href="<?php the_permalink(); ?>" class="effect_bg w-full flex mb-12" style="border-radius: 20px;">
+          <div class="h-56 w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>); border-radius: 20px 0px 0px 20px;">
             <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2">
               <?php if (!is_category() && has_category()): ?>
                 <?php
@@ -60,7 +60,7 @@ $st_is_ex_af = st_is_ver_ex_af();
               <?php endif; ?>
               </div>
           </div>
-          <div class="h-56 w-2/3 py-1 pl-8">
+          <div class="h-56 w-2/3" style="padding: 20px;">
             <div class="flex justify-between mb-1">
               <div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
               <div class="flex">
@@ -68,7 +68,7 @@ $st_is_ex_af = st_is_ver_ex_af();
                 <div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
               </div>
             </div>
-            <div class="text-2xl mb-3"><?php the_title(); ?></div>
+            <div class="text-xl mb-3"><?php the_title(); ?></div>
             <div class="h-16 text-sm text-gray-400"><?php the_excerpt(); ?></div>
           </div>
         </a>
