@@ -7,16 +7,8 @@ Template Name: TOPページ
 <?php get_header(); ?>
 
     <!-- ここからPICKUP -->
-    <div class="hidden lg:block h-560 w-full lg:flex justify-center items-center lg:mt-16 mb-48">
-      <?php get_template_part( 'template-parts/top-slide' ); //FVのスライダー読み込み ?>
-    </div>
+    <?php get_template_part( 'template-parts/top-slide' ); //FVのスライダー読み込み ?>
     <!-- PICKUPここまで -->
-
-    <!-- mobilePICKUPここから -->
-    <div class="lg:hidden">
-      <?php get_template_part( 'template-parts/top-slide' ); //FVのスライダー読み込み ?>
-    </div>
-    <!-- mobilePICKUPここから -->
 
     <!-- ここからPCメインコンテンツ -->
     <div class="hidden lg:grid grid-cols-2 grid-cols-11 mb-32">
