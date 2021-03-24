@@ -17,8 +17,8 @@ h2{
 }
 
 .swiper-container {
-  width: 55%;
-  height: 100%;
+  /* width: 55%;
+  height: 100%; */
   overflow: visible !important;
 }
 
@@ -32,7 +32,6 @@ h2{
   align-items: flex-end;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius:24px;
 }
 
 .bottom0-position{

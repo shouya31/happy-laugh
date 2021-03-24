@@ -1,5 +1,5 @@
-<div class="mainvisual">
-  <div class="bg-opacity-25 swiper-container">
+<div class="mainvisual flex items-center sm:my-32">
+  <div class="swiper-container h-4/5 sm:h-full w-full sm:w-3/5">
     <div class="swiper-wrapper">
 
       <?php
@@ -16,10 +16,10 @@
       ?>
         <a
           href="<?php the_permalink(); ?>"
-          class="swiper-slide w-3/5 bg-cover bg-no-repeat bg-center flex items-end"
+          class="swiper-slide bg-cover bg-center flex items-end sm:rounded-3xl"
           style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);"
         >
-          <div class="w-full bg-black bg-opacity-75 p-6" style="border-radius: 0px 0px 24px 24px;" >
+          <div class="w-full bg-black bg-opacity-75 sm:rounded-b-3xl p-6">
             <div class="text-white mb-4"><?php the_title(); ?></div>
             <div class="flex">
               <div class="text-sm text-white border-2 border-white rounded-full p-2">
