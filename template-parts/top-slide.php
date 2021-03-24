@@ -16,7 +16,7 @@
       ?>
         <a
           href="<?php the_permalink(); ?>"
-          class="swiper-slide bg-cover bg-center flex items-end sm:rounded-3xl"
+          class="swiper-slide bg-cover flex items-end sm:rounded-3xl"
           style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);"
         >
           <div class="w-full bg-black bg-opacity-75 sm:rounded-b-3xl p-6">
