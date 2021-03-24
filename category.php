@@ -35,7 +35,7 @@
 
       <!-- SP版カテゴリ説明 -->
       <div class="sm:hidden border border-black" style="width: 90%; margin: 50px auto;">
-      <div class="text-2xl lg:text-4xl font-black tracking-widest center m-5"><?php single_cat_title(); ?>　記事一覧</div>
+      <div class="text-lg lg:text-4xl font-black tracking-widest center m-5"><?php single_cat_title(); ?>　記事一覧</div>
         <div class="relative px-6">
           <div class="divide-y divide-black">
             <div class="category-sp-description border-b border-black text-xl pt-4 pb-4"><?php echo category_description(); ?></div>
@@ -66,12 +66,12 @@
             $author = get_userdata($post->post_author);
 					?>
 
-						<a href="<?php echo get_permalink( $post->ID ); ?>" class="w-full flex mb-10">
-							<div class="h-56 w-1/3  bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>');">
+						<a href="<?php echo get_permalink( $post->ID ); ?>" class="effect_bg w-full flex mb-10" style="border-radius: 20px;">
+							<div class="h-56 w-1/3  bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>'); border-radius: 20px 0px 0px 20px;">
                 <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2"><?php echo $category[0]->cat_name ?></div>
 							</div>
-							<div class="h-56 w-2/3 py-1 pl-8">
-								<div class="flex justify-between mb-4">
+							<div class="h-56 w-2/3" style="padding: 20px;">
+								<div class="flex justify-between mb-2">
 									<div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
 									<div class="flex">
 										<div class="h-4 w-4 bg-baby bg-cover bg-center"><?php echo get_avatar( $author->ID ); ?></div>
@@ -80,7 +80,7 @@
                     </div>
 									</div>
 								</div>
-								<div class="text-2xl mb-3"><?php echo $post->post_title; ?></div>
+								<div class="text-xl mb-3"><?php echo $post->post_title; ?></div>
 								<div class="h-16 text-sm text-gray-400"><?php the_excerpt(); ?></div>
 							</div>
 						</a>
@@ -90,7 +90,7 @@
 
 
       <div class="sm:hidden mb-8">
-        <div class="text-xl font-bold border-b-4 border-black p-2 mb-4"><?php single_cat_title(); ?></div>
+        <div class="text-xl font-bold border-b-4 border-black p-2 mb-2"><?php single_cat_title(); ?></div>
         <?php
 						$postslist = get_posts( "category=$now_category&numberposts=$numberposts&order=DESC&orderby=date" );
 						foreach ( $postslist as $post ) {
@@ -106,7 +106,7 @@
               <div class="h-full w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
                 <div class="w-1/3 bg-black flex justify-center"></div>
               </div>
-              <div class="h-full w-2/3 text-sm break-words font-verdana p-3">
+              <div class="h-full w-2/3 text-xm break-words font-verdana p-3">
                 <div class="w-full flex justify-between">
                   <div class="text-xs mb-3 text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
                   <div class="flex">

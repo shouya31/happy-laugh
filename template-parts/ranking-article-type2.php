@@ -12,13 +12,13 @@
     ?>
 
 
-  <a href="<?php the_permalink(); ?>" class="h-24 w-full flex mb-6">
+  <a href="<?php the_permalink(); ?>" class=" h-24 w-full flex mb-6 effect_bg">
     <div class="h-full w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);">
       <div class="w-1/3 bg-black flex justify-center">
         <div class="text-xs text-white pt-2 pb-2"><?php echo $i; ?></div>
       </div>
     </div>
-    <div class="h-full w-2/3 text-sm break-words pl-8 font-verdana">
+    <div class="h-full w-2/3 text-sm break-words font-verdana" style="padding: 7px; font-size: 12px;">
       <div class="flex mb-1">
         <?php if (!is_category() && has_category()): ?>
           <div class="ranking-category text-xs border border-black rounded-full p-1">

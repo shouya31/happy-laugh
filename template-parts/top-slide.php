@@ -1,5 +1,5 @@
 <div class="mainvisual">
-  <div class="swiper-container">
+  <div class="bg-opacity-25 swiper-container">
     <div class="swiper-wrapper">
 
       <?php

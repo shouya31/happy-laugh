@@ -30,11 +30,11 @@
             $category = get_the_category();
 					?>
 
-						<a href="<?php echo get_permalink( $post->ID ); ?>" class="w-full flex mb-10">
-							<div class="h-56 w-1/3  bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>');">
-                <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2"><?php echo $category[0]->cat_name ?></div>
+						<a href="<?php echo get_permalink( $post->ID ); ?>" class="effect_bg w-full flex mb-10" style="border-radius: 20px;">
+							<div class="h-56 w-1/3  bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>'); border-radius: 20px 0px 0px 20px;">
+                <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2" style="border-radius: 20px 0px 0px 0px;"><?php echo $category[0]->cat_name ?></div>
 							</div>
-							<div class="h-56 w-2/3 py-1 pl-8">
+							<div class="h-56 w-2/3 py-1" style="padding: 20px;">
 								<div class="flex justify-between mb-4">
 									<div class="text-xs text-gray-300"><?php echo get_the_date('Y/m/d'); ?></div>
 									<div class="flex">
@@ -42,7 +42,7 @@
 										<div class="text-xs text-gray-300 ml-2"><?php the_author(); ?></div>
 									</div>
 								</div>
-								<div class="text-2xl mb-3"><?php echo $post->post_title; ?></div>
+								<div class="text-xl mb-3"><?php echo $post->post_title; ?></div>
 								<div class="h-16 text-sm text-gray-400"><?php the_excerpt(); ?></div>
 							</div>
 						</a>
@@ -64,7 +64,7 @@
 					?>
 
         <div class="px-2">
-          <a href="<?php echo get_permalink( $post->ID ); ?>" class="h-24 w-full flex mb-6">
+          <a href="<?php echo get_permalink( $post->ID ); ?>" class="effect_bg h-24 w-full flex mb-6">
             <div class="h-full w-1/3 bg-flower bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>');">
             </div>
             <div class="h-full w-2/3 text-sm break-words py-1 pl-8">
