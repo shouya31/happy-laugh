@@ -20,8 +20,8 @@
   ?>
 
   <a href="<?php the_permalink(); ?>" class="effect_bg w-full flex mb-12" style="border-radius: 20px;">
-    <div class="h-56 w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>); border-radius: 20px 0px 0px 20px;">
-      <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2" style="border-radius: 20px 0px 0px 0px;">
+    <div class="h-56 w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>); border-radius: 20px">
+      <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2" style="border-radius:20px 0px 20px 0px;">
         <?php if (!is_category() && has_category()): ?>
           <?php
             $postcat = get_the_category();

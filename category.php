@@ -67,7 +67,7 @@
 					?>
 
 						<a href="<?php echo get_permalink( $post->ID ); ?>" class="effect_bg w-full flex mb-10" style="border-radius: 20px;">
-							<div class="h-56 w-1/3  bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>'); border-radius: 20px 0px 0px 20px;">
+							<div class="h-56 w-1/3  bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>'); border-radius: 20px;">
                 <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2"><?php echo $category[0]->cat_name ?></div>
 							</div>
 							<div class="h-56 w-2/3" style="padding: 20px;">
