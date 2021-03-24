@@ -33,12 +33,11 @@ Template Name: TOPページ
 
       <!-- ここから投稿 -->
       <input type="radio" class="hidden" name="new-recommend-switch" id="new-toggle" checked="checked" />
-
       <div id="new">
         <?php get_template_part( 'template-parts/mobile-new-article' ); //NEW投稿一覧読み込み ?>
-        <input type="radio" class="hidden" name="new-recommend-switch" id="recommend-toggle" />
       </div>
 
+      <input type="radio" class="hidden" name="new-recommend-switch" id="recommend-toggle" />
       <div id="recommend">
         <?php get_template_part( 'template-parts/mobile-recommend-article' ); //RECOMMEND投稿一覧読み込み ?>
       </div>
