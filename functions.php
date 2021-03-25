@@ -6625,6 +6625,28 @@ function is_bot() {
   }
   return false;
 }
+
+//閲覧数をadminで表示する
+function manage_posts_columns($columns) {
+	$columns['post_views_count'] = 'view数';
+	return $columns;
+	}
+function add_column($column_name, $post_id) {
+	/*View数呼び出し*/
+	if ( $column_name == 'post_views_count' ) {
+			$stitle = get_post_meta($post_id, 'post_views_count', true);
+	}
+	/*ない場合は「なし」を表示する*/
+	if ( isset($stitle) && $stitle ) {
+		echo attribute_escape($stitle);
+	}
+	else {
+		echo __('None');
+	}
+}
+add_filter( 'manage_posts_columns', 'manage_posts_columns' );
+add_action( 'manage_posts_custom_column', 'add_column', 10, 2 );
+
 function pagination( $pages, $paged, $range = 2, $show_only = false ) {
 
 	$pages = ( int ) $pages;    //float型で渡ってくるので明示的に int型 へ
