@@ -1,6 +1,6 @@
 <?php
   global $post;
-    $categories = get_the_category( );
+    $categories = get_the_category( $post->ID );
   ?>
 
 <div class="mb-24">
@@ -31,14 +31,16 @@
     </div>
     <div class="h-full w-2/3 text-sm break-words font-verdana" style="padding: 7px; font-size: 12px;">
       <div class="flex mb-1">
-        <?php if (!is_category() && has_category()): ?>
-          <div class="category_label">
-            <?php
-              $postcat = get_the_category();
-              echo $postcat[0]->name;
-            ?>
-          </div>
-        <?php endif; ?>
+        <div class="category_label">
+          <?php
+              $categories = get_the_category( $post->ID );
+            if ( $categories[1]->cat_name ){
+              echo $categories[1]->cat_name;
+            } else {
+              echo $categories[0]->cat_name;
+            }
+          ?>
+        </div>
       </div>
       <?php
         if(mb_strlen($post->post_title)>30):
