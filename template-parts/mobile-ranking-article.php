@@ -1,4 +1,4 @@
-<div class="mb-16 px-4">
+<div class="mb-16 ">
   <div class="text-lg font-bold border-b-4 border-black pl-2 mb-8">
     RANKING
   </div>

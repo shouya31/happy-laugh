@@ -1,4 +1,4 @@
-<div class="mainvisual flex items-center sm:my-32">
+<div class="mainvisual flex items-center sm:my-16">
   <div class="swiper-container h-4/5 sm:h-full w-full sm:w-3/5">
     <div class="swiper-wrapper">
 
