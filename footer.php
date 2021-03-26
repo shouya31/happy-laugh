@@ -1,7 +1,7 @@
 <footer>
   <div class="flex flex-col items-center border-double border-t-4 pt-4 lg:py-8">
     <div class="text-md lg:text-xl font-bold tracking-widest">ハピラフ</div>
-    <div class="text-2xl lg:text-4xl font-black tracking-widest">MAGAZINE</div>
+    <div class="text-2xl lg:text-4xl font-black tracking-widest" style="font-family: system-ui;">MAGAZINE</div>
   </div>
   <!-- PC版 -->
   <div class="hidden lg:flex justify-center divide-x divide-black mb-12">

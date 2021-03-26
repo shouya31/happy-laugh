@@ -104,3 +104,16 @@ h2{
 .effect_bg{
   box-shadow: 16px 4px 64px rgb(141 177 217 / 30%), -16px -16px 40px rgb(255 255 255 / 80%), inset -8px -6px 80px rgb(255 255 255 / 18%);
 }
+
+.category_label{
+  margin: 0 0 5px;
+  font-size: 8px;
+  line-height: 1em;
+  color: gray;
+  display: inline-block;
+  white-space: nowrap;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 999px;
+  border: 1px solid gray;
+}

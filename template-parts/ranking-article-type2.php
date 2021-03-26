@@ -21,7 +21,7 @@
     <div class="h-full w-2/3 text-sm break-words font-verdana" style="padding: 7px; font-size: 12px;">
       <div class="flex mb-1">
         <?php if (!is_category() && has_category()): ?>
-          <div class="ranking-category text-xs border border-black rounded-full p-1">
+          <div class="category_label">
             <?php
               $postcat = get_the_category();
               echo $postcat[0]->name;

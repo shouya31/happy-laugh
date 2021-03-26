@@ -23,10 +23,10 @@ Template Name: TOPページ
       <!-- ここからスイッチ -->
       <div class="h-14 w-full flex border-t border-gray-300">
         <div class="w-1/2 flex justify-center items-center border-b border-gray-300">
-          <label class="w-full font-bold text-xl text-center tracking-widest py-2" for="new-toggle">NEW</label>
+          <label class="w-full font-bold text-sx text-center tracking-widest py-2" for="new-toggle">NEW</label>
         </div>
         <div class="w-1/2 flex justify-center items-center border-l border-b border-gray-300">
-          <label class="w-full font-bold text-xl text-center tracking-widest py-2" for="recommend-toggle">RECOMMEND</label>
+          <label class="w-full font-bold text-sx text-center tracking-widest py-2" for="recommend-toggle">RECOMMEND</label>
         </div>
       </div>
       <!-- スイッチここまで -->
@@ -45,7 +45,7 @@ Template Name: TOPページ
     </div>
     <!-- mobileメインコンテンツここまで -->
 
-    <div class="lg:hidden">
+    <div class="lg:hidden px-4">
       <!-- SP_RANKING -->
 
       <?php get_template_part( 'template-parts/mobile-ranking-article' ); //RANKING読み込み ?>

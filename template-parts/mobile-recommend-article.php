@@ -12,7 +12,7 @@
 ?>
 
 <a href="<?php the_permalink(); ?>" class="effect_bg  mb-6 mt-6">
-  <div class="h-32 w-full flex">
+  <div class="h-36 w-full flex">
     <div class="h-full w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>);"></div>
     <div class="h-full w-2/3 text-sm break-words font-verdana p-3">
       <div class="w-full flex justify-between">

@@ -52,7 +52,7 @@
       <!-- ロゴ -->
       <a href="/" class="flex flex-col items-center py-1">
         <div class="text-1xl lg:text-xl font-bold tracking-widest">ハピラフ</div>
-        <div class="text-2xl lg:text-4xl font-black tracking-widest">MAGAZINE</div>
+        <div class="text-2xl lg:text-4xl font-black tracking-widest" style="font-family: system-ui;">MAGAZINE</div>
       </a>
       <!-- /ロゴ -->
 

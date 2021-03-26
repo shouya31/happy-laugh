@@ -58,7 +58,7 @@
 
       <!-- 記事 -->
       <div class="col-start-2 col-end-9">
-        <div class="text-3xl sm:text-4xl border-b-4 border-black px-4 pb-2 mb-4"><?php the_title() ?></div>
+        <div class="text-2xl sm:text-4xl border-b-4 border-black px-4 pb-2 mb-4"><?php the_title() ?></div>
         <div class="flex pl-4 mb-8">
           <a rel="nofollow" onclick="window.open('//twitter.com/intent/tweet?url=<?php echo $url_encode ?><?php echo $twitter_tag ?>&text=<?php echo $title_encode ?><?php echo $twitter_name ?>&tw_p=tweetbutton', '', 'width=500,height=450'); return false;" class="h-8 w-8 bg-twitter bg-cover bg-center mr-4" style="background-image: url('/wp-content/themes/affinger5/images/twitter-icon.jpeg');"></a>
           <a href="//www.facebook.com/sharer.php?src=bm&u=<?php echo $url_encode;?>&t=<?php echo $title_encode;?>" target="_blank" rel="nofollow noopener" class="h-8 w-8 bg-facebook bg-cover bg-center mr-4" style="background-image: url('/wp-content/themes/affinger5/images/facebook-icon.png');"></a>

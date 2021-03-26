@@ -1,29 +1,3 @@
-@charset "UTF-8";
-
-/* purgecss start ignore */
-/* (purgeしてほしくないもの) */
-/* purgecss end ignore */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-/*---------------------------------------------------------
-Theme Name: WING-AFFINGER5
-Theme URI: on-store.net
-Description:AFFINGER5
-Author: ONSPEED
-Author URI: on-store.net/law/
-Tags: custom-header, custom-menu
-Text Domain: affigner5
-Version: 20210201
-Requires at least: 5.0
-Tested up to: 5.5
-Requires PHP: 7.2
----------------------------------------------------------*/
-
-*,
 code {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", "Hiragino Kaku Gothic ProN", "メイリオ", meiryo, sans-serif;
 	margin: 0px;
@@ -2255,6 +2229,7 @@ p,
 .post h5 /* H5 */
 {
 	margin-bottom: 20px;
+	font-size: 15px;
 }
 
 /*ブログタイトル*/
@@ -2354,7 +2329,7 @@ p.itiran-category {
 	.st-catgroup.itiran-category .catname {
 		font-size:12px;
 		margin: 0 0 5px;
-		padding: 6px;
+		padding: 5px 8px;
 	}
 }
 
