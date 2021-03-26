@@ -1,13 +1,24 @@
+<?php
+  global $post;
+    $categories = get_the_category( );
+  ?>
+
 <div class="mb-24">
   <div class="h-12 w-full mb-8 text-3xl text-white font-bold py-2 pl-4 bg-black">
     RANKING
   </div>
 
     <?php
-    $i = 0;
-      setPostViews(get_the_ID());
-      query_posts('meta_key=post_views_count&orderby=meta_value_num&posts_per_page=5&order=DESC');
-      while(have_posts()) : the_post();
+      $i = 0;
+      $args = array(
+        'category__in' => $categories[0],
+        'posts_per_page'=>5,
+        'meta_key'=> 'post_views_count',
+        'orderby'=>'meta_value_num',
+        'order'=>'DESC'
+      );
+      $the_query = new WP_Query( $args );
+      while( $the_query->have_posts()) : $the_query->the_post();
       $i++;
     ?>
 

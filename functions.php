@@ -6900,3 +6900,4 @@ function scrapeImage( $text ) {
 
 	return $link;
 }
+

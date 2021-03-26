@@ -68,7 +68,15 @@
 
 						<a href="<?php echo get_permalink( $post->ID ); ?>" class="effect_bg w-full flex mb-10" style="border-radius: 20px;">
 							<div class="h-56 w-1/3  bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>'); border-radius: 20px;">
-                <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2"><?php echo $category[0]->cat_name ?></div>
+                <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2"  style="border-radius:20px 0px 20px 0px;">
+                <?php
+                if ( $category[1]->cat_name ){
+                  echo $category[1]->cat_name;
+                } else {
+                  echo $category[0]->cat_name;
+                }
+              ?>
+                </div>
 							</div>
 							<div class="h-56 w-2/3" style="padding: 20px;">
 								<div class="flex justify-between mb-2">
@@ -137,7 +145,7 @@
 
       <!-- ランキング -->
       <div class="sm:hidden mt-16">
-      <?php get_template_part( 'template-parts/mobile-ranking-article' ); //RANKING読み込み ?>
+      <?php get_template_part( 'template-parts/mobile-ranking-article-type2' ); //RANKING読み込み ?>
       </div>
       <!-- /ライター -->
 
