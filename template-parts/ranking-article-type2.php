@@ -4,9 +4,10 @@
   </div>
 
     <?php
+    $now_category = get_query_var('cat');
     $i = 0;
       setPostViews(get_the_ID());
-      query_posts('meta_key=post_views_count&orderby=meta_value_num&posts_per_page=5&order=DESC');
+      query_posts("cat=$now_category&meta_key=post_views_count&orderby=meta_value_num&posts_per_page=5&order=DESC");
       while(have_posts()) : the_post();
       $i++;
     ?>
