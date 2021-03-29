@@ -34,10 +34,11 @@
         <div class="category_label">
           <?php
               $categories = get_the_category( $post->ID );
-            if ( $categories[1]->cat_name ){
-              echo $categories[1]->cat_name;
+              $parent_cat = get_category($categories[0]->category_parent);
+              if ( $parent_cat->name ) {
+              echo $parent_cat->name;
             } else {
-              echo $categories[0]->cat_name;
+              echo $categories[0]->name;
             }
           ?>
         </div>

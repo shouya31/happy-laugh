@@ -39,8 +39,13 @@
         <div class="flex mb-2 mt-2">
           <div class="ranking-category text-xs border border-black rounded-full p-1">
             <?php
-              $postcat = get_the_category();
-              echo $postcat[0]->name;
+              $categories = get_the_category( $post->ID );
+              $parent_cat = get_category($categories[0]->category_parent);
+              if ( $parent_cat->name ) {
+                echo $parent_cat->name;
+              } else {
+                echo $categories[0]->name;
+              }
             ?>
           </div>
         </div>

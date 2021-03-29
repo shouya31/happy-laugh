@@ -1,5 +1,5 @@
 <div class="grid-span-1 lg:col-start-2 lg:col-end-8 flex flex-col pl-16">
-  <div class="w-11/12 text-5xl font-bold border-b-4 border-black pl-1 pb-5 mb-8">
+  <div class="font-serif w-11/12 text-5xl font-bold border-b-4 border-black pl-1 pb-5 mb-8">
     NEW
   </div>
 
@@ -22,13 +22,16 @@
   <a href="<?php the_permalink(); ?>" class="effect_bg w-full flex mb-12" style="border-radius: 20px;">
     <div class="h-56 w-1/3 bg-cover bg-center bg-no-repeat" style="background-image: url(<?php the_post_thumbnail_url( 'large' ); ?>); border-radius: 20px">
       <div class="w-1/2 bg-white text-xs text-center pt-2 pb-2" style="border-radius:20px 0px 20px 0px;">
-        <?php if (!is_category() && has_category()): ?>
-          <?php
-            $postcat = get_the_category();
-            echo $postcat[0]->name;
-          ?>
-        <?php endif; ?>
-        </div>
+        <?php
+          $categories = get_the_category( $post->ID );
+          $parent_cat = get_category($categories[0]->category_parent);
+          if ( $parent_cat->name ) {
+            echo $parent_cat->name;
+          } else {
+            echo $categories[0]->name;
+          }
+        ?>
+      </div>
     </div>
     <div class="h-56 w-2/3 py-1" style="padding: 20px;">
       <div class="flex justify-between mb-1">

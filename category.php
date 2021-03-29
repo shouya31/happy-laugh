@@ -39,7 +39,7 @@
         <div class="relative px-6">
           <div class="divide-y divide-black">
             <div class="category-sp-description border-b border-black text-xl pt-4 pb-4"><?php echo category_description(); ?></div>
-            <div class="flex pt-4 pb-4">
+            <div class="flex pt-4 pb-4" style="flex-wrap: wrap;">
               <?php
                 foreach ( $child_ids as $category_id ): ?>
                   <a href="<?php echo get_category_link( $category_id ); ?>" class="text-xs border border-black rounded-full mr-2" style="padding: 4px 10px; font-size:8px;"><?php echo get_the_category_by_ID( $category_id ) ?></a>
@@ -55,16 +55,25 @@
       <div class="hidden sm:block col-start-2 col-end-8">
         <div class="text-4xl border-b-4 border-black pl-2 pb-4 mb-12 font-bold"><?php single_cat_title(); ?></div>
 
-					<?php
-						$postslist = get_posts( "category=$now_category&numberposts=$numberposts&order=DESC&orderby=date" );
-						foreach ( $postslist as $post ) {
-
-            // サムネイルのURL取得ロジック
-            $thumbnail_id = get_post_thumbnail_id();
-            $eye_img = wp_get_attachment_image_src( $thumbnail_id , 'medium' );
-            $category = get_the_category();
-            $author = get_userdata($post->post_author);
-					?>
+        <?php
+            $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+            $args = array(
+              'category' => $now_category,
+              'post_status' => 'publish',
+              'post_type' => 'post', //　ページの種類（例、page、post、カスタム投稿タイプ名）
+              'paged' => $paged,
+              'orderby'     => 'date',
+              'order' => 'DESC',
+            );
+            $the_query = new WP_Query( $args );
+            if ( $the_query->have_posts() ) :
+              while ( $the_query->have_posts() ): $the_query->the_post();
+                // サムネイルのURL取得ロジック
+                $thumbnail_id = get_post_thumbnail_id();
+                $eye_img = wp_get_attachment_image_src( $thumbnail_id , 'medium' );
+                $category = get_the_category();
+                $author = get_userdata($post->post_author);
+          ?>
 
 						<a href="<?php echo get_permalink( $post->ID ); ?>" class="effect_bg w-full flex mb-10" style="border-radius: 20px;">
 							<div class="h-56 w-1/3  bg-cover bg-center" style="background-image: url('<?php echo $eye_img[0] ?>'); border-radius: 20px;">
@@ -92,7 +101,10 @@
 								<div class="h-16 text-sm text-gray-400"><?php the_excerpt(); ?></div>
 							</div>
 						</a>
-					<?php } ?>
+          <?php
+            endwhile;
+            endif;
+          ?>
 				</div>
       <!-- /カテゴリ記事 -->
 
@@ -133,7 +145,11 @@
                   <div class="ranking-category text-xs border border-black rounded-full p-1">
                     <?php
                       $postcat = get_the_category();
-                      echo $postcat[0]->name;
+                      if ( $postcat[1]->name ){
+                        echo $postcat[1]->name;
+                      } else {
+                        echo $postcat[0]->name;
+                      }
                     ?>
                   </div>
                 </div>

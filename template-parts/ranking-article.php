@@ -25,8 +25,13 @@
         <?php if (!is_category() && has_category()): ?>
           <div class="category_label">
             <?php
-              $postcat = get_the_category();
-              echo $postcat[0]->name;
+              $categories = get_the_category( $post->ID );
+              $parent_cat = get_category($categories[0]->category_parent);
+              if ( $parent_cat->name ) {
+                echo $parent_cat->name;
+              } else {
+                echo $categories[0]->name;
+              }
             ?>
           </div>
         <?php endif; ?>

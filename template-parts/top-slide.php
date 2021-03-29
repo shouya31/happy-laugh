@@ -24,8 +24,13 @@
             <div class="flex">
               <div class="text-sm text-white border-2 border-white rounded-full p-2">
                 <?php
-                  $postcat = get_the_category();
-                  echo $postcat[0]->name;
+                    $categories = get_the_category( $post->ID );
+                    $parent_cat = get_category($categories[0]->category_parent);
+                    if ( $parent_cat->name ) {
+                    echo $parent_cat->name;
+                  } else {
+                    echo $categories[0]->name;
+                  }
                 ?>
               </div>
             </div>
